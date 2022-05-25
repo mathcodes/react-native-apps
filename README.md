@@ -1,6 +1,16 @@
 # React Native Goals App
 
-As with many of my repos, this is a learning-based solo project to enhance my React and React-Native skills. Feel free to contribute and enjoy the notes and snippets below.
+As with many of my repos, this is a learning-based solo project to enhance my React and React-Native skills. Feel free to contribute and enjoy the notes and snippets below. Be sure to check out the sample apps in THIS directory.
+
+## Usage and Installation
+Each app will run on your own smart phone using the expo app, or on the Android or iOS emulators after running each of the following commands:
+```
+yarn
+```
+```
+yarn start
+```
+
 
 ## Inline styling VS React Native's `StyleSheet`:
 
@@ -27,6 +37,8 @@ const styles = StyleSheet.create({
 }
 });
 ```
+
+<img src="./assets/ss1.png" width="20%"/>
 
 ## Contact
 <img src="https://avatars0.githubusercontent.com/u/17928947?v=4" alt="Github profile image" width="80px" height="80px" />
