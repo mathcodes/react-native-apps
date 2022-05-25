@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-
+        <TextInput style={styles.textInput} placeholder="Your Goal!!!" />
+        <Button title="Add Goal" />
       </View>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.goalsContainer}>
+        <Text>List of Goals:</Text>
+      </View>
     </View>
   );
 }
