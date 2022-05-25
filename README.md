@@ -10,7 +10,11 @@ yarn
 ```
 yarn start
 ```
+You should something similar to the following in your terminal explaining how to launch the app on your device or emulator:
 
+<img src="./assets/terminal.png" width="70%" />
+
+# Key Takeaways from building this app
 
 ## Inline styling VS React Native's `StyleSheet`:
 
