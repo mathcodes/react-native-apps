@@ -1,0 +1,12 @@
+defaultPortal: jonshs
+portals:
+  - name: jonshs
+    portalId: 22036945
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          CO3zlPGPMBICAAUY0YPBCiCZ1cYVKO7pDDIUfhjTbUwA2lpZkEuDLc9QmKxWrj06GAAABEEAAAAAAAAAAAAAAAAAAAAAAAAABEIUaTqHBRGBxyh_DqgRKJxDmLk8a1NKA25hMVIAWgA
+        expiresAt: '2022-05-26T02:14:54.192Z'
+    personalAccessKey: >-
+      CiRhYWQ1MDAwNC1kY2UzLTQxMjAtYTQ2Yy1iZDUxMjVjYmI4MGMQ0YPBChiZ1cYVKhkABeaRgpp0l_aT8vZMFtYvs8ZGtKn_H3_rSgNuYTE
