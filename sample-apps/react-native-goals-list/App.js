@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, ScrollView, FlatList } from 'react-native';
 
 export default function App() {
   const [enteredGoalText, setEnteredGoalText] = useState('');
@@ -24,7 +24,11 @@ export default function App() {
  // setCourseGoals([...courseGoals, enteredGoalText]);
     // BUT when your state relies on previous state, passing a function to the state-changing function to derive the new state as it automatically receives the current state by React :)
     // So now we're updating this course goal state based on the old course goals by appending a new goal.
-    setCourseGoals(currentCourseGoals => [...currentCourseGoals, enteredGoalText]);
+    setCourseGoals(currentCourseGoals => [
+      ...currentCourseGoals, 
+      // Turning our items into objects with keys but changing `enteredGoalText` into just that:
+      { text: enteredGoalText, key: Math.random().toString() },
+    ]);
   };
   // We will use event listening props provided by react native on its components, such as:
   // onChangeText prop which takes in a pointer to a function 
@@ -39,15 +43,38 @@ export default function App() {
         <Button title="Add Goal" onPress={addGoalHandler}/>
       </View>
       <View style={styles.goalsContainer}>
+        {/* USing FlatList */}
+        <FlatList 
+          data={courseGoals} 
+          renderItem={(itemData) => {
+            return (
+              <View style={styles.goalItem}>
+                <Text style={styles.goalText}>
+                  {/* // make sure that when we access the data of a single item, we access the text property since each item is an object with a text property as we setup above, we dive into the text */}
+                  {itemData.item.text}
+                </Text>
+              </View>
+            )
+          }}
+          // called to get a key out of every item which will be attached to the item by the flatlist
+          keyExtractor={(item, index) => {
+
+          }}
+          alwaysBounceVertical={false} 
+        />
+        {/* NOTE: And under the hood, only the items that are needed are being rendered and the other items will be loaded lazily as we scroll closer to them. That's how this FlatList works now. */}
+        {/* // NOTE: alternative to setting up such a key property in the input data. */}
+        {/* add the keyExtractor prop to the FlatList with a function that takes two parameters, item and index */}
         {/* adding something dynamic using curly braces: */}
         {/* when outputting a list of data, as we're doing it here, every item in that list should receive a key prop which uniquely identifies the individual list item. Under the hood this helps React update the list in an efficient way, so to say. */}
-        {courseGoals.map((goal) => (
+        {/* {courseGoals.map((goal) => (
           <View style={styles.goalItem} key={goal}>
             <Text style={styles.goalText}>
               {goal}
             </Text>
           </View>
-        ))}
+        ))} */}
+        {/* </Flatlist> */}
       </View>
     </View>
   );
