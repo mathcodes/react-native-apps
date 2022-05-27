@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, ScrollView, FlatList } from 'react-native';
+import { StyleSheet, View, TextInput, Button, FlatList } from 'react-native';
+import GoalItem from './components/GoalItem';
 
 export default function App() {
   const [enteredGoalText, setEnteredGoalText] = useState('');
@@ -47,14 +48,7 @@ export default function App() {
         <FlatList 
           data={courseGoals} 
           renderItem={(itemData) => {
-            return (
-              <View style={styles.goalItem}>
-                <Text style={styles.goalText}>
-                  {/* // make sure that when we access the data of a single item, we access the text property since each item is an object with a text property as we setup above, we dive into the text */}
-                  {itemData.item.text}
-                </Text>
-              </View>
-            )
+            return <GoalItem text={itemData.item.text}/>
           }}
           // called to get a key out of every item which will be attached to the item by the flatlist
           keyExtractor={(item, index) => {
@@ -104,14 +98,5 @@ const styles = StyleSheet.create({
   },
   goalsContainer: {
     flex: 6
-  },
-  goalItem: {
-    margin: 8,
-    padding: 8,
-    borderRadius: 6,
-    backgroundColor: 'teal'
-  },
-  goalText: {
-    color: 'white'
   }
 });

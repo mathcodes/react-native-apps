@@ -42,16 +42,47 @@ Placing the `style={styles.goalItem}` and the `key={goal}` while we're at it bri
 ))}
 ```
 
-### GOTCHA!
+## Passing Props
+
+To pass text into the GoalItem component, we pass in a `props` object and get the `text` property like so:
+
+`GoalItem.js`
+```js
+function GoalItem (props) {
+
+...
+
+<Text style={styles.goalText}>
+  {props.text}
+</Text>
+```
+And where that component is used, in `App.js`, we give that component `<GoalItem />` the necessary prop in the by naming it `text` and passing in `itemData.item.text` as `text` is the property that holds the actual text:
+
+```js
+renderItem={(itemData) => {
+  return <GoalItem text={itemData.item.text}/>
+}}
+```
+
+## GOTCHA!
 
 Keep in mind, the "CSS" in React Native does not cascade like in html elements. Therefore in our case, the font is not white because the style is applied to the <View> element, not the standalone <Text> element.
 
-### SOLUTION:
+## GOTCHA! SOLUTION:
 
 Simply add another style object to the <Text> element:
 ```js
-
+<Text style={styles.goalText}>
 ```
+
+## GOTCHA!
+
+When we divide our application into components, we get an error that "View" is not defined.
+
+## GOTCHA! SOLUTION:
+
+In React Native, we have to import the components that are used inside each component as necessary.
+
 ## Contact
 <img src="https://avatars0.githubusercontent.com/u/17928947?v=4" alt="Github profile image" width="80px" height="80px" />
 
