@@ -1,14 +1,21 @@
 import { useState } from 'react';
-import { StyleSheet, View, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList, Button } from 'react-native';
 import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
 
 export default function App() {
   const [courseGoals, setCourseGoals] = useState([]); 
+  const [modalIsVisible, setModalIsVisible] = useState(false); 
   // So we should provide a function to "onPress" and since I plan on deleting items in the future, I will define this function in App.js, because here, I'm managing my "courseGoals" state, and here, I will have to delete items in the future.
 
-    function deleteGoalHandler(){
-      console.log("deleteGoalHandler");
+    function startAddGoalHandler () {
+      setModalIsVisible(true);
+    }
+
+    function deleteGoalHandler(id){
+      setCourseGoals(currentCourseGoals => {
+        return currentCourseGoals.filter((goal) => goal.id !== id);
+      });
     } // now we use a pointer in the GoalInput component below to pass the deleteGoalHandler as a value to the onDeleteItem prop 
   // and another handler to fire when the button is clicked
 
@@ -33,9 +40,18 @@ export default function App() {
 
   // We will use event listening props provided by react native on its components, such as:
   // onChangeText prop which takes in a pointer to a function 
+
+  // For button should control modal visibility so we need STATE
+  // add a new piece of state: modalIsVisible ...
   return (
     <View style={styles.appContainer}>
-      <GoalInput onAddGoal={addGoalHandler}/>
+      {/* ADD BUTTON TO OPEN MODAL */}
+    <Button title='Add New Goal' color="#d35400" onPress={startAddGoalHandler}   />
+    {/* Alter GoalInput to make it conditional:
+        - add curly braces
+        - check modalIsVisible state 
+        - if its true we render GoalInput which internally contains the modal */}
+      <GoalInput visible={modalIsVisible} onAddGoal={addGoalHandler}/>
       <View style={styles.goalsContainer}>
         <FlatList 
           data={courseGoals} 
@@ -43,6 +59,8 @@ export default function App() {
             return (
               <GoalItem 
                 text={itemData.item.text}
+                // here the id prop is set on GoalItem with the value of itemData.item.id
+                id={itemData.item.id}
                 onDeleteItem={deleteGoalHandler}
               />
             )
