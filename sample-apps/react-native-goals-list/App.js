@@ -1,58 +1,55 @@
 import { useState } from 'react';
-import { StyleSheet, View, TextInput, Button, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 import GoalItem from './components/GoalItem';
+import GoalInput from './components/GoalInput';
 
 export default function App() {
-  const [enteredGoalText, setEnteredGoalText] = useState('');
-  const [courseGoals, setCourseGoals] = useState([]);
-  // create handler function that controls the user input as it is typed
+  const [courseGoals, setCourseGoals] = useState([]); 
+  // So we should provide a function to "onPress" and since I plan on deleting items in the future, I will define this function in App.js, because here, I'm managing my "courseGoals" state, and here, I will have to delete items in the future.
 
-  // When text is received,this goalInputHandler function receives 
-  // the entered value automatically because its React Native that calls this 
-  // function and exposes this prop.
-  // React Native, will also provide us a value as a input as a parameter 
-  // to this function and that will be the enteredText. 
-  // So we get the enteredText automatically.
-  function goalInputHandler(enteredText) {
-    setEnteredGoalText(enteredText);
-  };
-
+    function deleteGoalHandler(){
+      console.log("deleteGoalHandler");
+    } // now we use a pointer in the GoalInput component below to pass the deleteGoalHandler as a value to the onDeleteItem prop 
   // and another handler to fire when the button is clicked
 
   // Now we want the value entered in the TextInput in this `addGoalHandler` function. So what we need to do is we need to store it as state, which is updated with every keystroke in the `goalInputHandler` function so that we can then use it in the `addGoalHandler` function.
-  function addGoalHandler(value) {
+  function addGoalHandler(enteredGoalText) {
     // We COULD use the spread operator like so:
  // setCourseGoals([...courseGoals, enteredGoalText]);
     // BUT when your state relies on previous state, passing a function to the state-changing function to derive the new state as it automatically receives the current state by React :)
     // So now we're updating this course goal state based on the old course goals by appending a new goal.
-    setCourseGoals(currentCourseGoals => [
+    setCourseGoals((currentCourseGoals) => [
       ...currentCourseGoals, 
-      // Turning our items into objects with keys but changing `enteredGoalText` into just that:
-      { text: enteredGoalText, key: Math.random().toString() },
+      { text: enteredGoalText, id: Math.random().toString() },
     ]);
-  };
+  }
+// Turning our items into objects with keys but changing `enteredGoalText` into just that:
+// After making our components, the problem is that this enteredGoalText is eventually needed in the App component, when 
+// we add a new goal. and therefore we also need to make sure that this data arrives here in addGoalHandler. { text: 
+// enteredGoalText, key: Math.random().toString() },
+//  SOLUTION : The easiest way of ensuring this would be to expect the enteredGoalText as a parameter:
+//    function addGoalHandler(enteredGoalText) {
+
+
   // We will use event listening props provided by react native on its components, such as:
   // onChangeText prop which takes in a pointer to a function 
   return (
     <View style={styles.appContainer}>
-      <View style={styles.inputContainer}>
-        <TextInput 
-          style={styles.textInput} 
-          placeholder="Your Goal!!!" 
-          onChangeText={goalInputHandler} i
-        />
-        <Button title="Add Goal" onPress={addGoalHandler}/>
-      </View>
+      <GoalInput onAddGoal={addGoalHandler}/>
       <View style={styles.goalsContainer}>
-        {/* USing FlatList */}
         <FlatList 
           data={courseGoals} 
           renderItem={(itemData) => {
-            return <GoalItem text={itemData.item.text}/>
+            return (
+              <GoalItem 
+                text={itemData.item.text}
+                onDeleteItem={deleteGoalHandler}
+              />
+            )
           }}
           // called to get a key out of every item which will be attached to the item by the flatlist
           keyExtractor={(item, index) => {
-
+            return item.id;
           }}
           alwaysBounceVertical={false} 
         />
@@ -79,22 +76,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 50,
     paddingHorizontal: 16
-  },
-  inputContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 24,
-    borderBottomWidth: 1,
-    borderBottomColor: '#d35400'
-  },
-  textInput: {
-    borderWidth: 1,
-    borderColor: '#d35400',
-    width: '65%',
-    marginRight: 8,
-    padding: 8
   },
   goalsContainer: {
     flex: 6
