@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import {StyleSheet, View, TextInput, Button, Modal} from 'react-native';
+import {StyleSheet, View, TextInput, Button, Modal, Image} from 'react-native';
 // Goal input JS because there we store the data input related JSX code and functionality.
 
 function GoalInput (props) {
@@ -26,6 +26,7 @@ function GoalInput (props) {
       // when setting the visible prop to props.visible, remember to set this prop on GoalInput in the App Component-*-
       <Modal visible={props.visible} animationType="slide"> 
         <View style={styles.inputContainer}>
+          <Image style={styles.image} source={require('../assets/diary.png')} />
           <TextInput 
             style={styles.textInput} 
             placeholder="Your Goal!!!" 
@@ -39,11 +40,11 @@ function GoalInput (props) {
 
   and expect a special prop which could be named, onAddGoal, to be provided by the parent component, which actually holds a function as a value that will be executed upon a press. */}
           <View style={styles.buttonContainer}>
-            <View style={styles.button}>
-              <Button title="Add Goal" onPress={addGoalHandler}/>
+             <View style={styles.button}>
+              <Button title="Cancel" onPress={props.onCancel}/>
             </View>
             <View style={styles.button}>
-              <Button title="Cancel"/>
+              <Button title="Add Goal" onPress={addGoalHandler}/>
             </View>
           </View>
           
@@ -61,14 +62,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 24,
-    borderBottomWidth: 1,
-    borderBottomColor: '#d35400'
+    backgroundColor: '#841584'
+  },
+  image: {
+    width: 192,
+    height: 132.5,
+    margin: 20,
+
   },
   textInput: {
-    borderWidth: 1,
+    borderWidth: 3,
     borderColor: '#d35400',
+    backgroundColor: '#e4dfff',
     width: '100%',
-    padding: 8
+    padding: 8,
+    borderRadius: 10,
+    color: 'black'
   },
   buttonContainer: {
     marginTop: 16,

@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
   goalItem: {
     margin: 8,
     padding: 8,
+    paddingTop: 28,
+    paddingBottom: 28,
     borderRadius: 6,
     backgroundColor: 'teal'
   },
