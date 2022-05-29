@@ -2,33 +2,46 @@ import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 
 
-export default function PrimaryButton({children}) {
+export default function PrimaryButton({ children }) {
 
   function pressHandler() {
     console.log('pressed')
   }
   return (
-    <Pressable onPress={pressHandler} android_ripple={{color: '#000'}}>
-      <View style={styles.buttonContainer}>
+    <View style={styles.buttonOuterContainer}>
+      <Pressable 
+      // style prop can also take a function which is automatically called by react when pressable is pressed
+      //  'pressed' is a react native property which part of the object and passed into the arrow function 
+        style={({pressed}) => pressed ? [styles.buttonInnerContainer, styles.pressed] : styles.buttonInnerContainer} 
+        onPress={pressHandler} 
+        android_ripple={{ color: '#000' }}
+      >
         <Text style={styles.buttonText}>
           {children}
         </Text>
-      </View>
-    </Pressable>
+      </Pressable>
+    </View>
+
   );
 }
 
 let styles = StyleSheet.create({
-  buttonContainer: {
-    backgroundColor: '#345507',
+  buttonOuterContainer: {
     borderRadius: 28,
-    paddingVertical: 8, 
-    paddingHorizontal: 16,
     margin: 4,
+    overflow: 'hidden'
+  },
+  buttonInnerContainer: {
+    backgroundColor: '#345507',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
     elevation: 2
   },
   buttonText: {
     color: 'white',
     textAlign: 'center'
+  },
+  pressed: {
+    opacity: 0.75
   }
 })
