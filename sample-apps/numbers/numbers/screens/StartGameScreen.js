@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { View, TextInput, StyleSheet, Alert } from 'react-native';
 import PrimaryButton from '../components/PrimaryButton';
 
-export default function StartGameScreen() {
+export default function StartGameScreen({onPickNumber}) {
   
   // Now with bind this to the TextInput, I mean that I wanna set the value prop on TextInput and set this equal to enteredNumber. I do this so that we can change the state from anywhere in this app.
   const [enteredNumber, setEnteredNumber] = useState('');
@@ -28,9 +28,10 @@ export default function StartGameScreen() {
         'Number has to be between 1 and 99.', 
         [{ text: 'Okay', style:'destructive', 
         onPress: resetInputHandler}]);
-      return
+      return;
     }
-    console.log('Valid entry!')
+    
+    onPickNumber(chosenNumber);
   }
 
   return (
