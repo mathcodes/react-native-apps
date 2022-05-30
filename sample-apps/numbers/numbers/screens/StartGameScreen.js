@@ -1,8 +1,38 @@
-import React from 'react';
-import { View, Button, TextInput, StyleSheet } from 'react-native';
+import { useState } from 'react';
+import { View, TextInput, StyleSheet, Alert } from 'react-native';
 import PrimaryButton from '../components/PrimaryButton';
 
 export default function StartGameScreen() {
+  
+  // Now with bind this to the TextInput, I mean that I wanna set the value prop on TextInput and set this equal to enteredNumber. I do this so that we can change the state from anywhere in this app.
+  const [enteredNumber, setEnteredNumber] = useState('');
+
+  // But of course, we also wanna update this `enteredNumber` state whenever the user types into the `TextInput` field. And for this, we can add a function, the `numberInputHandler`, for example, which should be executed upon every keystroke which can be achieved by adding the `onChangeText` prop here to this TextInput. And then we point at this numberInputHandler and this will in the end execute this function on every keystroke that is done on this TextInput.
+
+  // NOTE: parameter `enteredText`: we automatically get a value for this parameter because React Native will invoke this function for us for every keystroke on the TextInput.  
+  function numberInputHandler(enteredText) {
+    setEnteredNumber(enteredText);
+  }
+
+  function resetInputHandler() {
+    setEnteredNumber('');
+  }
+
+  function confirmInputHandler() {
+    const chosenNumber = parseInt(enteredNumber);
+
+    if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
+      // show alert
+      Alert.alert(
+        'Invalid Title', 
+        'Number has to be between 1 and 99.', 
+        [{ text: 'Okay', style:'destructive', 
+        onPress: resetInputHandler}]);
+      return
+    }
+    console.log('Valid entry!')
+  }
+
   return (
     <View style={styles.inputContainer}>
       <TextInput 
@@ -11,13 +41,16 @@ export default function StartGameScreen() {
         keyboardType='number-pad'
         autoCapitalize='none'
         autoCorrect={false}
+        onChangeText={numberInputHandler}
+        // when the Reset button is clicked to reset it to an empty string and such state changes are then reflected in TextInput. That's why I'm setting the value prop to the state. 
+        value={enteredNumber}
       />
       <View style={styles.buttonsContainer} >
         <View style={styles.buttonContainer}>
-          <PrimaryButton>Reset</PrimaryButton>
+          <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
         </View>
         <View style={styles.buttonContainer}>      
-          <PrimaryButton>Confirm</PrimaryButton>
+          <PrimaryButton onPress={confirmInputHandler} >Confirm</PrimaryButton>
         </View>
       </View>
     </View>
@@ -50,7 +83,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonsContainer: {
-    flewDirection: 'row'
+    flexDirection: 'row'
   },
   buttonContainer: {
     flex: 1
