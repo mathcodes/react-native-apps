@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { View, TextInput, StyleSheet, Alert } from 'react-native';
 import PrimaryButton from '../components/PrimaryButton';
-
+import Colors from '../constants/colors';
 // *^* automatically pull out the onPickNumber from the props object using object destructuring here, then call is whenever a number is picked and confirmed, in the onfirmInputHandler function below >*>
 export default function StartGameScreen({onPickNumber}) {
   
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 24,
     borderRadius :7,
     padding: 16,
-    backgroundColor: '#d35400',
+    backgroundColor: Colors.primary800,
     elevation: 4, //android 
     shadowColor: '#000', //ios ...
     shadowOffset: {width: 3, height: 6},
@@ -81,9 +81,9 @@ const styles = StyleSheet.create({
     height: 50,
     width: 60,
     fontSize: 32,
-    borderBottomColor: '#ddbf43',
+    borderBottomColor: Colors.accent500,
     borderBottomWidth: 2,
-    color: '#ddbf43',
+    color: Colors.accent500,
     marginVertical: 8,
     fontWeight: 'bold',
     textAlign: 'center',

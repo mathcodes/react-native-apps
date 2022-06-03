@@ -1,14 +1,18 @@
 import { View, Text, StyleSheet,  } from 'react-native';
+
+import Title from '../components/Title';
 // This screen shows up when we guess a number
 export default function GameScreen() {
   return (
     <View style={styles.screen}>
-      <Text style={styles.title}>Opponent's Guess</Text>
-
+      <Title>Opponent's Guess</Title>
       <View>
         <Text >Higher of Lower?</Text>
 
       </View>
+      <View>
+        {/* LOG ROUNDS */}
+        </View>
     </View>
   );
 }
@@ -17,11 +21,5 @@ const styles = StyleSheet.create({
   screen: {
     flex: 2,
     padding: 24
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#3b021f',
-    textAlign: 'center'
   }
 })

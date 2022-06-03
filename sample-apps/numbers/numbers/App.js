@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import StartGameScreen from './screens/StartGameScreen'; 
 import GameScreen from './screens/GameScreen'; 
-
+import Colors from './constants/colors';
 export default function App() {
   const [userNumber, setUserNumber] = useState(); 
 
@@ -18,9 +18,10 @@ export default function App() {
     screen = <GameScreen />
   }
   return (
-    <LinearGradient colors={['#ddbf43', '#d35400']} style={styles.rootScreen}>
+    <LinearGradient colors={[Colors.primary800, Colors.accent500]} style={styles.rootScreen}>
       <ImageBackground source={require('./assets/faviconSM_100.png')} resizeMode="repeat" style={styles.rootScreen} >
         {/* AND NOW WE RENDER THE SCREEN THROUGH THE 'screen' variable */}
+        {/* SafeAreaView automatically detects whether or not the device has a notch a the top of the screen */}
       <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
       </ImageBackground>
     </LinearGradient>
