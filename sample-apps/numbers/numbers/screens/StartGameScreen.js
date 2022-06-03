@@ -17,17 +17,20 @@ export default function StartGameScreen({onPickNumber}) {
   function resetInputHandler() {
     setEnteredNumber('');
   }
-
+// Here we check the current state and make sure its good to go
   function confirmInputHandler() {
+    // here we convert the string to a number
     const chosenNumber = parseInt(enteredNumber);
-
+    // handle errors:
     if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
-      // show alert
+      // show alert, accepts title, message,buttons 
       Alert.alert(
         'Invalid Title', 
         'Number has to be between 1 and 99.', 
+        // buttons are defined as object with text and style and optional onPress property to call a function when clicked
         [{ text: 'Okay', style:'destructive', 
-        onPress: resetInputHandler}]);
+        onPress: resetInputHandler}]
+        );
       return;
     }
     
@@ -42,8 +45,9 @@ export default function StartGameScreen({onPickNumber}) {
         keyboardType='number-pad'
         autoCapitalize='none'
         autoCorrect={false}
+        // with onChangeText we execute this function, numberInputHandler
         onChangeText={numberInputHandler}
-        // when the Reset button is clicked to reset it to an empty string and such state changes are then reflected in TextInput. That's why I'm setting the value prop to the state. 
+        // when the Reset button is clicked to reset it to an empty string and such state changes are then reflected in TextInput. That's why I'm setting the value prop to the state. We do this so we CAN change the state
         value={enteredNumber}
       />
       <View style={styles.buttonsContainer} >
