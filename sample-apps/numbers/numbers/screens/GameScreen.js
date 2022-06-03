@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet,  } from 'react-native';
-
+// This screen shows up when we guess a number
 export default function GameScreen() {
   return (
     <View style={styles.screen}>

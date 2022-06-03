@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { View, TextInput, StyleSheet, Alert } from 'react-native';
 import PrimaryButton from '../components/PrimaryButton';
 
+// *^* automatically pull out the onPickNumber from the props object using object destructuring here, then call is whenever a number is picked and confirmed, in the onfirmInputHandler function below >*>
 export default function StartGameScreen({onPickNumber}) {
   
   // Now with bind this to the TextInput, I mean that I wanna set the value prop on TextInput and set this equal to enteredNumber. I do this so that we can change the state from anywhere in this app.
@@ -33,7 +34,7 @@ export default function StartGameScreen({onPickNumber}) {
         );
       return;
     }
-    
+    // >*> execture onPickNumber and forward the number that has been picked
     onPickNumber(chosenNumber);
   }
 
