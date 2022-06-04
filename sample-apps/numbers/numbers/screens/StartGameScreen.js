@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TextInput, View, StyleSheet, Alert } from 'react-native';
+import { TextInput, View, StyleSheet, Alert, useWindowDimensions } from 'react-native';
 
 import PrimaryButton from '../components/ui/PrimaryButton';
 import Title from '../components/ui/Title';
@@ -9,6 +9,8 @@ import InstructionText from '../components/ui/InstructionText';
 
 function StartGameScreen({ onPickNumber }) {
   const [enteredNumber, setEnteredNumber] = useState('');
+
+  const { width, height } = useWindowDimensions();
 
   function numberInputHandler(enteredText) {
     setEnteredNumber(enteredText);
@@ -33,8 +35,10 @@ function StartGameScreen({ onPickNumber }) {
     onPickNumber(chosenNumber);
   }
 
+  const marginTopDist = height < 400 ? 20 : 100;
+
   return (
-    <View style={styles.rootContainer}>
+    <View style={[styles.rootContainer, {marginTop: marginTopDist}]}>
       <Title>Guess My Number</Title>
       <Card>
         <InstructionText>
@@ -64,10 +68,13 @@ function StartGameScreen({ onPickNumber }) {
 
 export default StartGameScreen;
 
+// this code only executes once so when user starts in landscape mode and switches to portrait, so we use a supplied hook, 'useWindowDimensions', for us to use INSIDE the component so when user flips orientation, the dimensions get adjusted
+// const deviceHeight = Dimensions.get('window').height;
+
 const styles = StyleSheet.create({
   rootContainer: {
     flex: 1,
-    marginTop: 100,
+    // marginTop: deviceHeight < 400 ? 20 : 100,
     alignItems: 'center',
   },
   numberInput: {
