@@ -11,6 +11,7 @@ import Colors from './constants/colors';
 export default function App() {
   const [userNumber, setUserNumber] = useState(); 
   const [ gameIsOver, setGameIsOver ] =  useState(true);
+  const [ guessRounds, setGuessRounds ] = useState(0);
 
   const [fontsLoaded] = useFonts({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
@@ -31,16 +32,28 @@ export default function App() {
   // if number is truthy, a valid number, then we make it into if block and 
   if (userNumber) {
     screen = 
+    // OVERVIEW2 (*)  So in GameScreen*^*
       <GameScreen userNumber={userNumber} onGameOver={gameOverHandler}/>
   }
 
   if (gameIsOver && userNumber) {
-    screen = <GameOverScreen />;
+    screen = <GameOverScreen userNumber={userNumber} roundsNumber={guessRounds} onStartNewGame={startNewGameHandler}/>;
   }
 
-  function gameOverHandler(){
+  // OVERVIEW: And now we just need to make sure that this parameter, 'numberOfRounds', is passed into gameOverHandler. So into the onGameOver prop from inside GameScreen. (*) 
+  // #&#
+  function gameOverHandler(numberOfRounds){
     screen =  setGameIsOver(true);
+    setGuessRounds(numberOfRounds);
   }
+
+  function startNewGameHandler() {
+    // resetting the game settings for new round
+    setUserNumber(null);
+    setGuessRounds(0);
+
+  }
+
   return (
     <LinearGradient colors={[Colors.primary800, Colors.accent500]} style={styles.rootScreen}>
       <ImageBackground source={require('./assets/faviconSM_100.png')} resizeMode="repeat" style={styles.rootScreen} >
