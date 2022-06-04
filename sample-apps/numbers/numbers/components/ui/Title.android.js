@@ -10,7 +10,8 @@ export default Title;
 const styles = StyleSheet.create({
   title: { 
     // borderWidth: Platform.OS === 'android' ? 2 : 0,
-    borderWidth: Platform.select({ios: 0, android: 2}),
+    // borderWidth: Platform.select({ios: 0, android: 2}),
+    borderWidth: 2,
     borderColor: 'white',
     padding: 12,
     borderRadius: 15,
