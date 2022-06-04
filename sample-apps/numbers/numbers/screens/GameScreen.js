@@ -21,7 +21,7 @@ function generateRandomBetween(min, max, exclude) {
 
 let minBoundary = 1;
 let maxBoundary = 100;
-
+// ^^^
 function GameScreen({ userNumber, onGameOver }) {
   const initialGuess = generateRandomBetween(1, 100, userNumber);
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
@@ -29,10 +29,12 @@ function GameScreen({ userNumber, onGameOver }) {
 
   useEffect(() => {
     if (currentGuess === userNumber) {
+      // *^* So in GameScreen, where we do call this onGameOver function here, we wanna pass the guessRounds length as an argument because that's the number of items in this guess rounds array. And that is the number of rounds It took the device to guess our number we're passing this into the function which we receive through that onGameOver prop ^^^. And that turns out to be that gameOverHandler function in App.js #&#
       onGameOver(guessRounds.length);
     }
   }, [currentGuess, userNumber, onGameOver]);
 
+  // in order for the values for min/maxBoundary to reset when we restart game, we have to setup this useEffect hook and passing in the empty array. In this case, it only runs when component is on ui, then off then on, but NOT each time component is updated (new guess made). 
   useEffect(() => {
     minBoundary = 1;
     maxBoundary = 100;
