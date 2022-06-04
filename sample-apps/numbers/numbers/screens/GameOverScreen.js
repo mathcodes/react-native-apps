@@ -10,11 +10,12 @@ function GameOverScreen({ roundsNumber, userNumber, onStartNewGame }) {
 
   return (
     <View style={styles.rootContainer}>
-      <Title>GAME OVER!</Title>
+      <Title>Round Complete!</Title>
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
-          source={require('../assets/images/success.png')}
+          resizeMode="contain"
+          source={require('../assets/images/dart.png')}
         />
       </View>
       <Text style={styles.summaryText}>
@@ -22,7 +23,7 @@ function GameOverScreen({ roundsNumber, userNumber, onStartNewGame }) {
         rounds to guess the number{' '}
         <Text style={styles.highlight}>{userNumber}</Text>.
       </Text>
-      <PrimaryButton onPress={onStartNewGame}>Start New Game</PrimaryButton>
+      <PrimaryButton onPress={onStartNewGame}>Start Another Round</PrimaryButton>
     </View>
   );
 }
@@ -35,19 +36,18 @@ const styles = StyleSheet.create({
     padding: 24,
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 15
   },
   imageContainer: {
     width: 300,
-    height: 300,
-    borderRadius: 150,
-    borderWidth: 3,
-    borderColor: Colors.primary800,
+    height: 300, 
     overflow: 'hidden',
     margin: 36,
   },
   image: {
     width: '100%',
     height: '100%',
+ 
   },
   summaryText: {
     fontSize: 24,
@@ -55,6 +55,8 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   highlight: {
+    fontSize: 40,
     color: Colors.primary500,
+    backgroundColor: Colors.primary800
   },
 });

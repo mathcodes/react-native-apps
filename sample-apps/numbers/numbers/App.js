@@ -56,7 +56,7 @@ export default function App() {
 
   return (
     <LinearGradient colors={[Colors.primary800, Colors.accent500]} style={styles.rootScreen}>
-      <ImageBackground source={require('./assets/faviconSM_100.png')} resizeMode="repeat" style={styles.rootScreen} >
+      <ImageBackground source={require('./assets/bg.jpg')} resizeMode="" style={styles.rootScreen} imageStyle={styles.backgroundImage}>
         {/* AND NOW WE RENDER THE SCREEN THROUGH THE 'screen' variable */}
         {/* SafeAreaView automatically detects whether or not the device has a notch a the top of the screen */}
       <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   rootScreen: { 
     flex: 1
   },
-  startGame: {
-  
+  backgroundImage: {
+    opacity: 0.3
   }
 });
