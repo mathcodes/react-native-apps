@@ -1,5 +1,14 @@
 # React Native Goals App
 
+## Welcome to the React Native Goals Application Repository where you can come to learn, collabroate, pull, download, fork, contribute, and have fun while learning from some of the most diverse set of learning methods bundled into one convenient location. Treat it like a walkthrough, or self-paced learning tool to build fully-functional iOS + Android Applications right out of the box!!! 
+
+## Links to Stand-Alone Apps Ready to fork, clone, download and run!!!
+|   1  |  2   |  3   |   4  |
+|---- |---- |---- |---- |
+| [Numbers](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/numbers) |[Counter](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-counter)    |[FlexBox1](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-flexbox1)|[FlexBox2](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-flexbox2)| 
+|[Goals List](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-goals-list)|  [navigation](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-navigation)   |     |     |
+
+
 As with many of my repos, this is a learning-based solo project to enhance my React and React-Native skills. Feel free to contribute and enjoy the notes and snippets below. Be sure to check out the sample apps in [THIS](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps) directory.
 
 ## Usage and Installation
