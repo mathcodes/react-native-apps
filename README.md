@@ -6,7 +6,7 @@
 |   1  |  2   |  3   |   4  |
 |---- |---- |---- |---- |
 | [Numbers](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/numbers) |[Counter](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-counter)    |[FlexBox1](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-flexbox1)|[FlexBox2](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-flexbox2)| 
-|[Goals List](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-goals-list)|  [navigation](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-navigation)   |   [NavigationApp1](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/NavigationApp1)  |     |
+|[Goals List](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-goals-list)|  [navigation](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-navigation)   |   [nav](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/nav)  |     |
 
 
 As with many of my repos, this is a learning-based solo project to enhance my React and React-Native skills. Feel free to contribute and enjoy the notes and snippets below. Be sure to check out the sample apps in [THIS](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps) directory.

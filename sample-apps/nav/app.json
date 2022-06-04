@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "nav",
+    "name": "Nav",
     "slug": "nav",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "backgroundColor":"#77197a",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
