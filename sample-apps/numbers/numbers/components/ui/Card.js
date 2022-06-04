@@ -10,11 +10,13 @@ export default Card;
 
 const styles = StyleSheet.create({
   card: {
+    flex:1,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 6,
     marginHorizontal: 24,
     padding: 16,
+    color: Colors.primary600,
     backgroundColor: Colors.primary800,
     borderRadius: 8,
     elevation: 4,
