@@ -18,6 +18,15 @@ export default function MyKeyboard() {
     setResult(null);
   };
 
+  // Handlers;
+  const numPressHandler = (buttonValue: string) => {
+
+  };
+
+  const opPressHandler = (buttonValue: string) => {
+
+  };
+
   return (
     <View style={Styles.bottomView}>
       <View
@@ -32,9 +41,9 @@ export default function MyKeyboard() {
       </View>
       <View style={Styles.row}>
         <Button title="C" isGray onPress={clear} />
-        <Button title="+/-" isGray onPress={() => handleOperationPress("+/-")} />
-        <Button title="％" isGray onPress={() => handleOperationPress("％")} />
-        <Button title="÷" isBlue onPress={() => handleOperationPress("/")} />
+        <Button title="+/-" isGray onPress={() => opPressHandler("+/-")} />
+        <Button title="％" isGray onPress={() => opPressHandler("％")} />
+        <Button title="÷" isBlue onPress={() => opPressHandler("/")} />
       </View>
       <View style={Styles.row}>
         <Button title="b1" />
