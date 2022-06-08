@@ -7,5 +7,5 @@ export const globalColors ={
   btn2: '#333333',
   black: '#000000',
   white: '#FFFFFF', 
-  result: '#c737a5',
+  solution: '#c737a5',
 }

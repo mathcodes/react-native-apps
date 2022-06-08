@@ -12,6 +12,7 @@ btnBlue: {
     justifyContent: "center",
     alignItems: "center",
     margin: 8,
+    
 },
 btnLight: {
     backgroundColor: globalColors.white,
@@ -26,19 +27,23 @@ btn2: {
     margin: 8,
 },
 btn1: {
-    backgroundColor: globalColors.btn1,
+    backgroundColor: 'black',
     justifyContent: "center",
     alignItems: "center",
     margin: 8,
+    
 },
 
 smTxtLight: {
     fontSize: 32,
     color: globalColors.white,
+
+    padding:'25%',
 },
 smTxtDark: {
     fontSize: 32,
     color: globalColors.black,
+    padding:'25%',
 },
 
 row: {
@@ -52,7 +57,7 @@ bottomView: {
 screenFirstNum: {
     fontSize: 96,
     color: globalColors.gray,
-    fontWeight: '200',
+    fontWeight: '400',
     alignSelf: "flex-end",
 },
 screenSecondNum: {

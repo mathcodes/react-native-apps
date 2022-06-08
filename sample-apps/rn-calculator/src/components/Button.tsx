@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import { TouchableOpacity, Text } from "react-native";
 import { ThemeContext } from "../context/ThemeContext";

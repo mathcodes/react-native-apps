@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from 'react';
 import { SafeAreaView, StyleSheet, Switch, Text } from 'react-native';
 import { globalColors } from './src/styles/colors';
