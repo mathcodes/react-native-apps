@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SafeAreaView, StyleSheet, Switch, Text } from 'react-native';
 import { globalColors } from './src/styles/colors';
 import { ThemeContext } from './src/context/ThemeContext';
+import Keyboard from './src/components/Keyboard';
 
 
 
@@ -14,6 +15,7 @@ export default function App() {
           value={theme === 'dark'}
           onValueChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         />
+      <Keyboard />  
       </SafeAreaView>
     </ThemeContext.Provider>
   );
