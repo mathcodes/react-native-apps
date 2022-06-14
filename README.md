@@ -55,6 +55,17 @@ yarn start
 ```
 You should something similar to the following in your terminal explaining how to launch the app on your device or emulator:
 
+<table class="tg" style="width:100%; text-align:center;">
+   
+<tbody>
+  <tr>
+    <td class="tg-0pky"><h1 style="color:#519ba5">NOTE: this QR Code will not work, but when you run your app, use the one that comes up in your terminal 👍</h1>
+    </td>
+ 
+  </tr>
+</tbody>
+</table>
+
 <img src="./assets/terminal.png" width="70%" />
 
 # Key Takeaways from building this app
