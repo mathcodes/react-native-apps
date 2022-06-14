@@ -24,8 +24,12 @@
       <a href="https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-goals-list)">Goals List</a>
     </td>
     <td class="tg-0pky" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/nav)">Nav</a>
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-nav">Nav</a>
     </td>
+    <td class="tg-0pky" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-nav">Nav</a>
+    </td>
+
   </tr>
   <tr>
     <td class="tg-0pky"></td>
