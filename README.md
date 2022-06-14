@@ -68,7 +68,8 @@ You should something similar to the following in your terminal explaining how to
 
 <img src="./assets/terminal.png" width="70%" />
 
-# Key Takeaways from building this app
+# Key Takeaways 
+## Throughout the different sample apps in the table above, you will find "key takeaways" outlining the major topics covered and the focus of each application. Here is an example:
 
 ## Inline styling VS React Native's `StyleSheet`:
 
