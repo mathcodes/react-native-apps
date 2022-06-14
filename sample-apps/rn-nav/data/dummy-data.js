@@ -1,16 +1,6 @@
 import Category from '../models/category';
 import Meal from '../models/meal';
 
-// class Category {
-//   constructor(id, title, color) {
-//     this.id = id;
-//     this.title = title;
-//     this.color = color;
-//   }
-// }
-
-// export default Category;
-
 export const CATEGORIES = [
   new Category('c1', 'Italian', '#f5428d'),
   new Category('c2', 'Quick & Easy', '#f54242'),
