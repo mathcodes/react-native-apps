@@ -1,8 +1,8 @@
 # React Native Goals App
 
-## Welcome to the React Native Goals Application Repository where you can come to learn, collabroate, pull, download, fork, contribute, and have fun while learning from some of the most diverse set of learning methods bundled into one convenient location. Treat it like a walkthrough, or self-paced learning tool to build fully-functional iOS + Android Applications right out of the box!!! 
+### Welcome to the React Native Goals Application Repository where you can come to learn, collabroate, pull, download, fork, contribute, and have fun while learning from some of the most diverse set of learning methods bundled into one convenient location. Treat it like a walkthrough, or self-paced learning tool to build fully-functional iOS + Android Applications right out of the box!!! 
 
-## Links to Stand-Alone Apps Ready to fork, clone, download and run!!!
+### Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
 <table class="tg" style="width:100%; text-align:center;">
 <thead>
   <tr>
@@ -68,10 +68,10 @@ You should something similar to the following in your terminal explaining how to
 
 <img src="./assets/terminal.png" width="70%" />
 
-# Key Takeaways 
-## Throughout the different sample apps in the table above, you will find "key takeaways" outlining the major topics covered and the focus of each application. Here is an example:
+## Key Takeaways 
+### Throughout the different sample apps in the table above, you will find "key takeaways" outlining the major topics covered and the focus of each application. Here is an example:
 
-## Inline styling VS React Native's `StyleSheet`:
+### Inline styling VS React Native's `StyleSheet`:
 
 ```js
 <Text style={styles.text}>This is just some text</Text>
