@@ -1,12 +1,12 @@
 # React Native Goals App
 
-### Welcome to the React Native Goals Application Repository where you can come to learn, collabroate, pull, download, fork, contribute, and have fun while learning from some of the most diverse set of learning methods bundled into one convenient location. Treat it like a walkthrough, or self-paced learning tool to build fully-functional iOS + Android Applications right out of the box!!! 
+Welcome to the React Native Goals Application Repository where you can come to learn, collabroate, pull, download, fork, contribute, and have fun while learning from some of the most diverse set of learning methods bundled into one convenient location. Treat it like a walkthrough, or self-paced learning tool to build fully-functional iOS + Android Applications right out of the box!!! 
 
-### Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
+## Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
 <table class="tg" style="width:100%; text-align:center;">
 <thead>
   <tr>
-    <th class="tg-0pky" colspan="5">Sample Apps</th>
+    <th class="tg-0pky" colspan="6">Sample Apps</th>
   </tr>
 </thead>
 <tbody>
@@ -31,13 +31,7 @@
     </td>
 
   </tr>
-  <tr>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
+ 
 </tbody>
 </table>
 
