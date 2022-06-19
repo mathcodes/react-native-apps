@@ -21,6 +21,11 @@ export default function App() {
       </View>
     </View>
   );
+}          </Stack.Navigator>
+        </NavigationContainer>
+      </Provider>
+    </>
+  );
 }
 
 // React Native StyleSheet Object:
