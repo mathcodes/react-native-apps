@@ -1,0 +1,33 @@
+﻿<style>
+    .visited { color:green }
+</style>
+<body>
+<textarea id="players"></textarea>
+<button onclick="start();">start</button>
+<div id="container"></div>
+<div id="progress"></div>
+</body>
+<script>
+
+function start() {
+
+var list = document.querySelector("#players").value.split("\n");
+var index = {};
+var current = 0;
+var page = 0;
+
+var container = document.querySelector("#container");
+
+document.querySelector("#progress").innerHTML = list.map(function(e){
+    return "http://www.playok.com/zh/game.phtml/"+e+".zip?gid=rv&uid="+e;
+}).join("<br/>")
+
+getpage();
+
+}
+
+
+
+
+
+</script>
