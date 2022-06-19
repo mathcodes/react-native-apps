@@ -34,6 +34,7 @@ function FavoritesContextProvider({children}) {
       currentFavIds.filter((mealId) => mealId !== id)
     );
   }
+
   const value = {
     ids: favoriteMealIds,
     // the VALUE (right of colon) addFavorite is referring the the function above getting an id passed into it.
