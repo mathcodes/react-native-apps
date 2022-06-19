@@ -1,5 +1,7 @@
 import { useLayoutEffect } from 'react';
-import MealsList from '../components/MealsList/MealsList';
+import { View, FlatList, StyleSheet } from 'react-native';
+
+import MealItem from '../components/MealItem';
 import { MEALS, CATEGORIES } from '../data/dummy-data';
 
 function MealsOverviewScreen({ route, navigation }) {
@@ -18,21 +20,37 @@ function MealsOverviewScreen({ route, navigation }) {
       title: categoryTitle,
     });
   }, [catId, navigation]);
-// And for this we have to import it
 
-// from the Components Meal List folder,
+  function renderMealItem(itemData) {
+    const item = itemData.item;
 
-// and then the Meals List file,
+    const mealItemProps = {
+      id: item.id,
+      title: item.title,
+      imageUrl: item.imageUrl,
+      affordability: item.affordability,
+      complexity: item.complexity,
+      duration: item.duration,
+    };
+    return <MealItem {...mealItemProps} />;
+  }
 
-// and we can get rid of these unused imports here
-
-// which we don't need anymore,
-
-// and now we pass these Displayed Meals here to Meals List,
-    return <MealsList items={displayedMeals} />
-} 
-
+  return (
+    <View style={styles.container}>
+      <FlatList
+        data={displayedMeals}
+        keyExtractor={(item) => item.id}
+        renderItem={renderMealItem}
+      />
+    </View>
+  );
+}
 
 export default MealsOverviewScreen;
 
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 16,
+  },
+});

@@ -1,7 +1,8 @@
 import { View, FlatList, StyleSheet } from 'react-native';
+
 import MealItem from './MealItem';
 
-function MealsList ({itemsProp}) {
+function MealsList ({items}) {
   function renderMealItem(itemData) {
     const item = itemData.item;
 
@@ -19,8 +20,7 @@ function MealsList ({itemsProp}) {
   return (
     <View style={styles.container}>
       <FlatList
-      // in addition we need to make sure we get the data from the flat list (so  )
-        data={itemsProp}
+        data={items}
         keyExtractor={(item) => item.id}
         renderItem={renderMealItem}
       />
@@ -36,3 +36,4 @@ const styles = StyleSheet.create({
     padding: 16,
   },
 });
+ 
