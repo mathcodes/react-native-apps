@@ -1,0 +1,411 @@
+li#menu-item-498 a {
+  background-image: url(https://gladisandco.com/wp-content/uploads/2022/03/Instagram-Logo-White.eps_.png);
+
+}
+
+.page-id-386 div#content {
+  width: 100%;
+}
+
+.taptap-by-bonfire ul li a {
+  margin-bottom: 10px;
+  font-family: Charoe !important;
+}
+
+.page-id-850 div#body div#content,
+.page-id-931 div#body div#content {
+  width: 100% !important;
+  padding: 0;
+}
+
+.page-id-850 aside#sidebar,
+.page-id-931 aside#sidebar {
+  padding: 0px;
+}
+
+.page-id-850 .ngg-gallery-thumbnail img,
+.page-id-931 .ngg-gallery-thumbnail img {
+  width: 96%;
+  margin: 2% !important;
+}
+
+.page-id-850 div#body,
+.page-id-931 div#body {
+  width: 99% !important;
+}
+
+@media screen and (max-width: 767px) {
+  li#menu-item-498 a {
+    /*    display:none; */
+    width: 23px;
+  }
+
+  .page-id-386 {
+    margin-top: 0px !important;
+  }
+
+  div#content {
+    width: 90% !important;
+    margin: auto !important;
+  }
+
+  .column-1 {
+    width: 100% !important;
+    padding-left: 0px !important;
+  }
+
+  img.alignnone.wp-image-208 {
+    width: 100% !important;
+    margin-top: 20px;
+    padding: 20px;
+  }
+}
+
+footer#footer {
+  background-color: white;
+}
+
+footer#footer .footer-text.clearfix,
+footer#footer ul#footer-nav li a {
+  color: black;
+}
+
+#social-contact li:nth-child(1) a {
+  background: url(https://gladisandco.com/wp-content/uploads/2022/06/instagram_new.png) no-repeat center center;
+  background-size: contain;
+  margin: 5px 5px 5px 20px !important;
+}
+
+#social-contact li:nth-child(2) a {
+  /* 	background: url(https://gladisandco.com/wp-content/uploads/2022/06/houzz_new.png) no-repeat  center
+background-size: 0px	; */
+  display: none;
+  /* 	align-content :center; */
+  /* 	margin:auto; */
+}
+
+.social-content #clearfix {
+  display: none;
+}
+
+background-size: contain;
+display: none;
+align-content :center;
+margin:auto;
+align-content :center;
+/* 	margin: 5px 5px 5px 5px; */
+
+footer#footer {
+  display: none;
+}
+
+#module:after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid #666;
+}
+
+footer#footer {
+  display: none;
+}
+
+.taptap-main-inner-inner {
+  padding-top: 90px !important;
+}
+
+@media (max-width: 768px) {
+
+  .taptap-absolute {
+    position: fixed;
+  }
+
+  .taptap-absolute {
+    position: fixed !important;
+  }
+
+  .taptap-logo-image img {
+    width: 20%;
+    max-height: 170px !important;
+    max-width: 170px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .default-single-project-thumbnail {
+    width: 100%;
+    padding-bottom: 66% !important;
+    margin-right: 0px !important;
+    margin-top: 10px !important;
+    margin-left: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .pagewidth-full {
+    width: 100% !important;
+    padding: 0px !important;
+    margin-top: -5px !important;
+  }
+
+  .additional-hover a {
+    padding: 30% 10% 50% 10% !important;
+    background: rgb(18 32 60 / 0%);
+  }
+
+  .default-title {
+    line-height: 0 !important;
+  }
+}
+
+.additional-hover a {
+  padding: 30% 10% 50% 10% !important;
+}
+
+
+#header-wrap {
+  background: #d2691e00 !important;
+}
+
+@media screen and (min-width: 1024px) {
+  ul#main-nav {
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  #site-logo {
+    height: 232px;
+    width: 270px;
+  }
+}
+
+@media (max-width: 2560px) and (min-width: 268px) {
+  #site-logo {
+    /*   width: 10%; */
+    /* 	min-height: 200px;
+max-height: 270px !important; */
+    /*   max-width: 270px; */
+    margin-top: 10px;
+    margin-left: 10px;
+
+
+  }
+
+  .single-project .default-header {
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    /* height: 820px !important; */
+  }
+
+  .page-template-page-portfolio .default-title-wrap {
+    /* height: 80px !important; */
+  }
+
+  .page-template .default-title {
+    line-height:  !important;
+  }
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  .single-project .default-header {
+    background-attachment: scroll !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 500px !important;
+  }
+
+  .single-project .default-header::before {
+    height: 100% !important;
+    position: absolute !important;
+  }
+
+  .single-project .default-title {
+    line-height: 10 !important;
+  }
+
+  #content img {
+    width: 100% !important;
+  }
+}
+
+.page-template-page-portfolio .default-header.default-title-wrap {
+  position: inherit;
+}
+
+.page-template-page-portfolio .default-title-wrap {
+  background-size: contain !important;
+  position: absolute !important;
+  /*     height: 280px !important; */
+}
+
+.single-project .default-header::before {
+  height: 100% !important;
+  position: absolute !important;
+}
+
+.single-project .default-title-wrap {
+  bottom: 110px;
+}
+
+ul#social-contact {
+  margin-bottom: 15px !important;
+}
+
+body.page-template {
+  margin-top: 0px !important;
+}
+
+body.page-template {
+  margin-top: 0px !important;
+  font-family: 'Source Sans Pro' !important;
+  font-weight: 200 !important;
+}
+
+.tp-bgimg.defaultimg::after {
+  background: rgba(0, 0, 0, 0.1) !important;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.page-template-page-portfolio .default-header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.single-project .default-header::before {
+  background: rgb(54 52 52 / 0%) !important;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#main-nav .current_page_item a,
+#main-nav .current-menu-item a {
+  color: #c3c4c7 !important;
+}
+
+#main-nav .current_page_item a:hover,
+#main-nav .current-menu-item a:hover {
+  color: #c3c4c7 !important;
+}
+
+#main-nav a:hover {
+  color: #c3c4c7;
+}
+
+body.project-template-default {
+  margin-top: 0px !important;
+}
+
+.page-id-386 .default-header {
+  background-position-y: bottom !important;
+}
+
+.contact-logo {
+  display: block;
+  width: 30%;
+  margin: 0px auto 0px auto !important;
+  padding: 20% 5% 20% 5% !important;
+  background: url(https://gladisandco.com/wp-content/uploads/2022/06/gladisandCoBlue-1.png) no-repeat center center;
+  background-size: contain;
+}
+
+#site-logo {
+  position: absolute;
+  top: 25px;
+  left: -10px;
+  margin: 0;
+  text-decoration: none;
+  display: block;
+  background: url(https://gladisandco.com/wp-content/uploads/2022/06/gladisandCoWhite-1.png) no-repeat center center !important;
+  background-size: contain !important;
+  height: 150px;
+  width: 270px;
+}
+
+#content-full-width>div:nth-child(1) {
+  background: url(https://gladisandco.com/wp-content/uploads/2022/05/Wemberly-Chapter-Image-1-scaled.jpg) no-repeat top center !important;
+  background-size: cover !important;
+}
+
+/* #pagewrap div.default-header{
+        background: url(https://gladisandco.com/wp-content/uploads/2022/05/Wemberly-Chapter-Image-1-scaled.jpg) no-repeat top center !important;
+background-size: contain !important;
+} */
+
+.sl-wrapper .sl-close {
+  display: none;
+  position: fixed;
+  right: 30px;
+  top: 63px !important;
+  z-index: 1015;
+}
+
+@media screen and (max-width: 479px) {
+  #module {
+    font-size: 1rem !important;
+    line-height: 16px !important;
+  }
+
+  #content img {
+    width: 10% !important;
+
+  }
+
+  .additional-hover:hover {
+    z-index: 1000;
+  }
+
+  #module a {
+    font-size: 1rem !important;
+
+  }
+
+  .column-1 {
+    width: 72% !important;
+    padding-left: 5px !important;
+  }
+
+  img.alignnone.wp-image-208 {
+    width: 100% !important;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .project-template-default .default-header {
+    background-size: cover !important;
+    height: 320px !important;/ background-attachment: scroll !important;
+  }
+
+  .project-template-default .default-title {
+    /*     line-height: 0 !important; */
+  }
+
+  ul#social-contact {}
+
+  .single-project .default-header::before {
+    height: 55% !important;
+  }
+
+  #content-full-width>div:nth-child(1)>a {
+    /* 	display:none; */
+
+    opacity: 0;
+    /* 	border-radius:50%; */
+    z-index: 1000;
+  }
+}
