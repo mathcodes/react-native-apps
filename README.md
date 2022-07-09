@@ -3,35 +3,54 @@
 Welcome to the React Native Goals Application Repository where you can come to learn, collabroate, pull, download, fork, contribute, and have fun while learning from some of the most diverse set of learning methods bundled into one convenient location. Treat it like a walkthrough, or self-paced learning tool to build fully-functional iOS + Android Applications right out of the box!!! 
 
 ## Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
-<table class="tg" style="width:100%; text-align:center;">
+
+<table class="tg" style="width:90px; text-align:center;">
 <thead>
   <tr>
-    <th class="tg-0pky" colspan="6">Sample Apps</th>
+    <th class="tg-0pky" colspan="8">Sample Apps</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-counter)"> Counter</a>
+   <td class="tg-0pky" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-basic">Basic</a>
+    </td>
+     <td class="tg-0pky" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-calculator">Calculator</a>
     </td>
     <td class="tg-0pky" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-flexbox1)"> FlexBox1</a>
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-counter">Counter</a>
     </td>
     <td class="tg-0pky" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-flexbox2)"> FlexBox2</a>
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-flexbox1">FlexBox1</a>
     </td>
     <td class="tg-0pky" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-goals-list)">Goals List</a>
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-flexbox2">FlexBox2</a>
+    </td>
+    <td class="tg-0pky" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-goals-list">Goals List</a>
     </td>
     <td class="tg-0pky" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-nav">Nav</a>
     </td>
     <td class="tg-0pky" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-nav">Nav</a>
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-navigation">Navigation</a>
     </td>
-
-  </tr>
- 
+    </tr>
+    <tr>
+    <td class="tg-0pky" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-game-setup">Game Setup</a>
+    </td>
+      <td class="tg-0pky" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-goals-list">Goals List</a>
+    </td>
+    <td class="tg-0pky" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-numbers">Numbers</a>
+    </td>
+    <td class="tg-0pky" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-redux">Redux</a>
+    </td>
+ </tr>
 </tbody>
 </table>
 
