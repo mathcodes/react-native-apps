@@ -18,12 +18,16 @@ function ManageExpenses({ route, navigation, style}) {
   }, [navigation, isEditing]);
 
   function deleteExpenseHandler() {
-    console.log('Delete expense!');
+    navigation.goBack(); // go back to the previous screen
   }
 
-  function cancelHandler() { }
+  function cancelHandler() {
+    navigation.goBack(); // go back to the previous screen
+  }
 
-  function confirmHandler() { }
+  function confirmHandler() {
+    navigation.goBack(); // go back to the previous screen
+  }
 
   return (
     <View style={styles.container}>
