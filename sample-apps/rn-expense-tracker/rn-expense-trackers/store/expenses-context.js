@@ -34,7 +34,7 @@ const DUMMY_EXPENSES = [
 ]
 
 
-const ExpensesContext = createContext({// create a context object with uppercase character as it will be a Component
+export const ExpensesContext = createContext({// create a context object with uppercase character as it will be a Component
   expenses: [],
   addExpense: ({ description, amount, date }) => { }, // addExpense is a function
   deleteExpense: (id) => { }, // id is the id of the expense
@@ -52,7 +52,14 @@ function expensesReducer(state, action) {
       const updatableExpenseIndex = state.findIndex(
         (expense) => expense.id === action.payload.id
       );
+      const updatableExpense = state[updatableExpenseIndex]; // Because now we can get the updateableExpense itself by using state and then access this updateableExpenseIndex. 
+      // We can then create our updatedItem here by generating a new item to update it in an immutable way, where we spread all our updateableExpense properties, so of this object that we got from the original array. And where we then also merge in our action.payload.data properties,
+      const updatedItem = { ...updatableExpense, ...action.payload.data }; // So we merge the dated description, amount, and date into this object, and we will therefore override the existing values for description, amount, and date.
+      const updatedExpenses = [...state]; // We create a new array of expenses, and we copy all the expenses from the original array, and we then replace the updatedExpenseIndex with the updatedItem.
+      updatedExpenses[updatableExpenseIndex] = updatedItem; // We replace the updatedExpenseIndex with the updatedItem. And therefore, then thereafter we can return this updatedExpenses array. So now that's a new array based on the old array with one item updated.
+
     case 'DELETE':
+      return state.filter((expense) => expense.id !== action.payload);//
     default:
       return state;
   }
