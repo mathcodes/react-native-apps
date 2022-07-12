@@ -7,52 +7,70 @@ Welcome to the React Native Applications Repository. I do encourage contribution
 
 ## Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
 
-<table class="tg" style="width:90px; text-align:center;">
+<table class="tg" style="width:100% !important display:inline-table; text-align:center;">
 <thead>
   <tr>
-    <th class="tg-0pky" colspan="8">Sample Apps</th>
+    <th class="tg-0pky" colspan="4">Sample Apps (⭐️=currently in progress)</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-   <td class="tg-0pky" colspan="1">
+   <td class="tg-0pky" style="width:10% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-basic">Basic</a>
     </td>
-     <td class="tg-0pky" colspan="1">
+     <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-calculator">Calculator</a>
     </td>
-    <td class="tg-0pky" colspan="1">
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-counter">Counter</a>
     </td>
-    <td class="tg-0pky" colspan="1">
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-flexbox1">FlexBox1</a>
     </td>
-    <td class="tg-0pky" colspan="1">
+  </tr>
+  <tr>
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-flexbox2">FlexBox2</a>
     </td>
-    <td class="tg-0pky" colspan="1">
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-goals-list">Goals List</a>
     </td>
-    <td class="tg-0pky" colspan="1">
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-nav">Nav</a>
     </td>
-    <td class="tg-0pky" colspan="1">
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-navigation">Navigation</a>
     </td>
     </tr>
     <tr>
-    <td class="tg-0pky" colspan="1">
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-game-setup">Game Setup</a>
     </td>
-      <td class="tg-0pky" colspan="1">
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-goals-list">Goals List</a>
     </td>
-    <td class="tg-0pky" colspan="1">
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-numbers">Numbers</a>
     </td>
-    <td class="tg-0pky" colspan="1">
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-redux">Redux</a>
     </td>
+    </tr>
+    <tr>
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-expense-tracker/rn-expense-trackers">⭐️Expense Trackers⭐️</a>
+    </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+      <a href=""></a>
+    </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+      <a href=""></a>
+    </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+      <a href=""></a>
+    </td>
+      
+      
  </tr>
 </tbody>
 </table>
@@ -74,7 +92,7 @@ You should something similar to the following in your terminal explaining how to
    
 <tbody>
   <tr>
-    <td class="tg-0pky"><h3 style="color:#519ba5">NOTE: this QR Code will not work, but when you run your app, use the one that comes up in your terminal 👍</h3>
+    <td class="tg-0pky""color:#519ba5">NOTE: this QR Code will not work, but when you run your app, use the one that comes up in your terminal 👍</h3>
     </td>
  
   </tr>
