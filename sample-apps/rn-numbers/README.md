@@ -1,3 +1,19 @@
+# Numbers
+![https://img.shields.io/badge/library-react%20native-blue](https://img.shields.io/badge/library-react%20native-blue) ![https://img.shields.io/badge/library-expo-blue](https://img.shields.io/badge/library-expo-black) ![ios](https://img.shields.io/badge/OS-iOS-white) ![android](https://img.shields.io/badge/library-android-green) 
+
+## Description
+Let the computer play YOU! This React Native app lets the computer guess a number from 1-100 chosen by the user. 
+
+Installation:
+```bash
+expo start
+yarn
+yarn start
+```
+
+## Notes:
+A few steps and options I took are explained below.
+
 For backgroundColor:
 
 ```js    
@@ -6,7 +22,7 @@ For backgroundColor:
 "splash": {
 ```
 
-What I will do instead though is, I will add a background color with help of a view:
+Instead, let's add a background color in our View component:
 ```js
 <View style={styles.buttonOuterContainer}>
   <Pressable 
@@ -23,7 +39,7 @@ What I will do instead though is, I will add a background color with help of a v
 </View>
 ```
 
-Now, how can we fetch and handle the user input with good old state Because again, it is just a React component:
+Now `fetch` and `handle` the user input with `state` (just a React component):
 
 `StartGameScreen.js`:
 ```js
