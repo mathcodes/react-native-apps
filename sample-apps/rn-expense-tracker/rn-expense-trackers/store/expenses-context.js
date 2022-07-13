@@ -5,31 +5,31 @@ const DUMMY_EXPENSES = [
     id: 'e1',
     description: 'Guitar Picks',
     amount: 54.99,
-    date: new Date('2021-06-09')
+    date: new Date('2022-06-09')
   },
   {
     id: 'e2',
     description: 'Fender Amp',
     amount: 435.99,
-    date: new Date('2021-08-22')
+    date: new Date('2022-07-10')
   },
   {
     id: 'e3',
     description: 'Guitar Strap',
     amount: 12.99,
-    date: new Date('2022-02-09')
+    date: new Date('2022-07-09')
   },
   {
     id: 'e4',
     description: 'Guitar Shirt',
     amount: 22.99,
-    date: new Date('2022-12-09')
+    date: new Date('2022-07-09')
   },
   {
     id: 'e5',
     description: 'Guitar Magazine',
     amount: 2.99,
-    date: new Date('2022-11-19')
+    date: new Date('2022-07-13')
   }
 ]
 
@@ -95,7 +95,7 @@ function ExpensesContextProvider({ children }) { // children is the component th
       payload: expenseData, // the payload is the data that we want to pass into the reducer function. We also forward the expenseData object that we are passing in (without object destructuring)
     });
   }
-
+  //n1 I want to trigger this function.(*)(1)-(*)(2)
   function deleteExpense(id) {
     dispatch({
       type: 'DELETE',
