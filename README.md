@@ -1,6 +1,9 @@
-# React Native Goals App
+# React Native Apps
 
-Welcome to the React Native Goals Application Repository where you can come to learn, collabroate, pull, download, fork, contribute, and have fun while learning from some of the most diverse set of learning methods bundled into one convenient location. Treat it like a walkthrough, or self-paced learning tool to build fully-functional iOS + Android Applications right out of the box!!! 
+![https://img.shields.io/badge/library-react%20native-blue](https://img.shields.io/badge/library-react%20native-blue) ![https://img.shields.io/badge/library-expo-blue](https://img.shields.io/badge/library-expo-black) ![ios](https://img.shields.io/badge/OS-iOS-white) ![android](https://img.shields.io/badge/library-android-green) 
+
+## Description
+Welcome to the React Native Applications Repository. I do encourage contributions!!! Anything from minor edits to entire apps you would like to share wiuht the community. Easy way to get your contributions up while networking and learning! Be sure to read this [Code of Conduct](https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md) provided by GitHub. Feel free to contact me using the link below with questions to get you started. 👍
 
 ## Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
 
@@ -54,20 +57,15 @@ Welcome to the React Native Goals Application Repository where you can come to l
 </tbody>
 </table>
 
-
-  
-
-
-
-
-As with many of my repos, this is a learning-based solo project to enhance my React and React-Native skills. Feel free to contribute and enjoy the notes and snippets below. Be sure to check out the sample apps in [THIS](https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps) directory.
+NOTE: 
 
 ## Usage and Installation
 Each app will run on your own smart phone using the expo app, or on the Android or iOS emulators after running each of the following commands:
 ```
+expo init
+
 yarn
-```
-```
+ 
 yarn start
 ```
 You should something similar to the following in your terminal explaining how to launch the app on your device or emulator:
@@ -76,14 +74,14 @@ You should something similar to the following in your terminal explaining how to
    
 <tbody>
   <tr>
-    <td class="tg-0pky"><h1 style="color:#519ba5">NOTE: this QR Code will not work, but when you run your app, use the one that comes up in your terminal 👍</h1>
+    <td class="tg-0pky"><h3 style="color:#519ba5">NOTE: this QR Code will not work, but when you run your app, use the one that comes up in your terminal 👍</h3>
     </td>
  
   </tr>
 </tbody>
 </table>
 
-<img src="./assets/terminal.png" width="70%" />
+<img src="./assets/terminal.png" width="40%" />
 
 ## Key Takeaways 
 ### Throughout the different sample apps in the table above, you will find "key takeaways" outlining the major topics covered and the focus of each application. Here is an example:
