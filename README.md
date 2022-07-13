@@ -7,10 +7,10 @@ Welcome to the React Native Applications Repository. I do encourage contribution
 
 ## Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
 
-<table class="tg" style="width:90px; text-align:center;">
+<table style="width:100% !important;">
 <thead>
   <tr>
-    <th class="tg-0pky" colspan="8">Sample Apps</th>
+    <th class="tg-0pky" colspan="8">Sample Apps (⭐️=currently in progress)</th>
   </tr>
 </thead>
 <tbody>
@@ -53,6 +53,11 @@ Welcome to the React Native Applications Repository. I do encourage contribution
     <td class="tg-0pky" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-redux">Redux</a>
     </td>
+     <td class="tg-0pky" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-expense-tracker/rn-expense-trackers">⭐️Expense Trackers⭐️</a>
+    </td>
+      
+      
  </tr>
 </tbody>
 </table>
