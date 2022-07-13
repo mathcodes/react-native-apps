@@ -1,5 +1,8 @@
-# React Native Goals App
+# React Native Apps
 
+![https://img.shields.io/badge/library-react%20native-blue](https://img.shields.io/badge/library-react%20native-blue) ![https://img.shields.io/badge/library-expo-blue](https://img.shields.io/badge/library-expo-black) ![ios](https://img.shields.io/badge/OS-iOS-white) ![android](https://img.shields.io/badge/library-android-green) 
+
+## Description
 Welcome to the React Native Goals Application Repository where you can come to learn, collabroate, pull, download, fork, contribute, and have fun while learning from some of the most diverse set of learning methods bundled into one convenient location. Treat it like a walkthrough, or self-paced learning tool to build fully-functional iOS + Android Applications right out of the box!!! 
 
 ## Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
