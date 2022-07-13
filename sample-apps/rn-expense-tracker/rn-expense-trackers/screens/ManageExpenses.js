@@ -1,11 +1,12 @@
-import { useLayoutEffect } from 'react';
+import { useContext, useLayoutEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Button from '../components/UI/Button';
-
+import { ExpensesContext } from '../store/expenses-context';
 import IconButton from '../components/UI/IconButton';
 import { GlobalStyles } from '../constants/styles';
 
 function ManageExpenses({ route, navigation, style}) {
+  const expensesCtx = useContext(ExpensesContext);
   // drilling into an object which might be undefined
   // using '?' inline and rendering the UI accordingly:
   const editedExpenseId = route.params?.expenseId;
@@ -18,6 +19,7 @@ function ManageExpenses({ route, navigation, style}) {
   }, [navigation, isEditing]);
 
   function deleteExpenseHandler() {
+    expensesCtx.deleteExpense(editedExpenseId); // delete the expense from the store
     navigation.goBack(); // go back to the previous screen
   }
 
