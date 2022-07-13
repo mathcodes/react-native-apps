@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons'
 import ManageExpenses from './screens/ManageExpenses'
 import RecentExpenses from './screens/RecentExpenses'
 import AllExpenses from './screens/AllExpenses'
-
+import ExpensesContextProvider from './store/expenses-context';
 import { GlobalStyles } from './constants/styles';
 import IconButton from './components/UI/IconButton';
 
@@ -16,46 +16,46 @@ const BottomTabs = createBottomTabNavigator();
 
 function ExpensesOverview() {
   return (
-    <BottomTabs.Navigator 
-    // the function below return this configuration object and also accepts the parameter 'navigation'
-      screenOptions={({navigation}) => ({
+    <BottomTabs.Navigator
+      // the function below return this configuration object and also accepts the parameter 'navigation'
+      screenOptions={({ navigation }) => ({
         headerStyle: { backgroundColor: GlobalStyles.colors.primary500 },
         headerTintColor: 'white',
-        tabBarStyle: {backgroundColor: GlobalStyles.colors.primary500 },
+        tabBarStyle: { backgroundColor: GlobalStyles.colors.primary500 },
         tabBarActiveTintColor: GlobalStyles.colors.accent500,
-        headerRight: () => <IconButton 
-          icon="add"   
-          size={24} 
+        headerRight: () => <IconButton
+          icon="add"
+          size={24}
           onPress={() => {
             navigation.navigate('ManageExpenses')
           }} />
       })
-    }>
-      <BottomTabs.Screen 
-      name="RecentExpenses" 
-      component={RecentExpenses} 
-      options={{
-        title: 'Recent Expenses',
-        tabBarLabel: 'Recent',
-        tabBarIcon: ({color, size}) => ( 
-          <Ionicons 
-            name="hourglass" 
-            size={size} 
-            color={color}/>
-        )
-      }}
+      }>
+      <BottomTabs.Screen
+        name="RecentExpenses"
+        component={RecentExpenses}
+        options={{
+          title: 'Recent Expenses',
+          tabBarLabel: 'Recent',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name="hourglass"
+              size={size}
+              color={color} />
+          )
+        }}
       />
-      <BottomTabs.Screen 
-        name="AllExpenses" 
-        component={AllExpenses} 
+      <BottomTabs.Screen
+        name="AllExpenses"
+        component={AllExpenses}
         options={{
           title: 'All Expenses',
           tabBarLabel: 'All',
-          tabBarIcon: ({color, size}) => ( 
-            <Ionicons name="calendar" size={size} color={color}/>
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="calendar" size={size} color={color} />
           )
         }}
-        />
+      />
     </BottomTabs.Navigator>
   )
 }
@@ -64,22 +64,24 @@ export default function App() {
   return (
     <>
       <StatusBar style="auto" />
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{
-          headerStyle: {backgroundColor: GlobalStyles.colors.primary500},
-          headerTintColor: 'white'
-        }}>
-          <Stack.Screen 
-          name="ExpensesOverview" 
-          component={ExpensesOverview} 
-          options={{ headerShown: false }}
-          />
-          <Stack.Screen name="ManageExpenses" component={ManageExpenses} options={{
-            presentation: 'modal',
-            
-          }} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </> 
+      <ExpensesContextProvider>
+        <NavigationContainer>
+          <Stack.Navigator screenOptions={{
+            headerStyle: { backgroundColor: GlobalStyles.colors.primary500 },
+            headerTintColor: 'white'
+          }}>
+            <Stack.Screen
+              name="ExpensesOverview"
+              component={ExpensesOverview}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen name="ManageExpenses" component={ManageExpenses} options={{
+              presentation: 'modal',
+
+            }} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </ExpensesContextProvider>
+    </>
   );
 }
