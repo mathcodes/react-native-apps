@@ -3,6 +3,7 @@
 ![https://img.shields.io/badge/library-react%20native-blue](https://img.shields.io/badge/library-react%20native-blue) ![https://img.shields.io/badge/library-expo-blue](https://img.shields.io/badge/library-expo-black) ![ios](https://img.shields.io/badge/OS-iOS-white) ![android](https://img.shields.io/badge/library-android-green) 
 
 ## Description
+ 
 Welcome to the React Native Applications Repository. I do encourage contributions!!! Anything from minor edits to entire apps you would like to share wiuht the community. Easy way to get your contributions up while networking and learning! Be sure to read this [Code of Conduct](https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md) provided by GitHub. Feel free to contact me using the link below with questions to get you started. 👍
 
 ## Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
@@ -134,6 +135,13 @@ const styles = StyleSheet.create({
 ```
 
 <img src="./assets/ss1.png" width="20%"/>
+ 
+Welcome to the React Native Expense Tracker! This app utilizes `context` to manage `state`, tracks your expenses allowing you to add, edit, and delete them. `Navigation` is implemented using `@react-navigation/native` along with other goodies like `@expo/vector-icons` and customized date functions. 
+ 
+<img src="./assets/expense-tracker-7.png" width="30%"/>
+<img src="./assets/expense-tracker-8.png" width="30%"/>
+<img src="./assets/expense-tracker-9.png" width="30%"/>
+ 
 
 ## Contact
 <img src="https://avatars0.githubusercontent.com/u/17928947?v=4" alt="Github profile image" width="80px" height="80px" />
