@@ -15,7 +15,7 @@ function RecentExpenses() {
 
   });
 // So this will give us our recentExpenses here, and now it's the recentExpenses that are set as a value on the expenses prop on ExpensesOutput. So we can forward RecentExpenses here.
-  return <ExpensesOutput expenses={recentExpenses} expensesPeriod="Last 7 Days" />;
+  return <ExpensesOutput expenses={recentExpenses} expensesPeriod="Last 7 Days" fallbackText="No expenses registered for the last 7 days"/>;
 }
 
 export default RecentExpenses;
