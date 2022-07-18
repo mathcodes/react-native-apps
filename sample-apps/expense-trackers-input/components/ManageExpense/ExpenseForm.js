@@ -7,6 +7,8 @@ import { getFormattedDate } from '../../util/date';
 import { GlobalStyles } from '../../constants/styles';
 
 function ExpenseForm({ submitButtonLabel, onCancel, onSubmit, defaultValues }) {
+  //2. Now for that, we can start with a couple of state slices by using useState, provided by React and by then registering state for the different input values. So here, we could then get our amountValue, for example.
+  //2. Notice after || the '' because whenever you fetch an input value, you will get it as a string
   const [inputs, setInputs] = useState({
     amount: {
       value: defaultValues ? defaultValues.amount.toString() : '',
@@ -21,6 +23,16 @@ function ExpenseForm({ submitButtonLabel, onCancel, onSubmit, defaultValues }) {
       isValid: true,
     },
   });
+
+  //3. One way to handle the input is to setup a handler for each input: call it amountChangedHandler, so set the amount value to the entered text which react native provides as we have connected the function to onChangeText. In other words, React Native will make sure that this parameter value is provided automatically, and this will be the amount or the value entered into the text input to which this function is connected.
+
+  <Input
+    style={styles.inputsRow}
+    label="Amount"
+    textInputConfig = {{
+      keyboardType: 'decimal-pad',
+      onChange: amountChangedHandler,
+    }}
 
   function inputChangedHandler(inputIdentifier, enteredValue) {
     setInputs((curInputs) => {
@@ -68,7 +80,9 @@ function ExpenseForm({ submitButtonLabel, onCancel, onSubmit, defaultValues }) {
   return (
     <View style={styles.form}>
       <Text style={styles.title}>Your Expense</Text>
-      <View style={styles.inputsRow}>
+      {/* inputsRow has flexDirection=row to child components are next to each other BUT applied using rowInput instead to isolate these two View elements */}
+      <View style={styles.inputsRow}> 
+      //1. In order to use the input values, we will start in the input component where we accept the textInputConfig, which allows us in the ExpensForm component to add the onChangeText property, which allows us to connect the inputs to functions that will be executed whenever the entered values change.
         <Input
           style={styles.rowInput}
           label="Amount"
