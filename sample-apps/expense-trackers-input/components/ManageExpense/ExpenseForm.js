@@ -6,10 +6,11 @@ import Button from '../UI/Button';
 import { getFormattedDate } from '../../util/date';
 import { GlobalStyles } from '../../constants/styles';
 
+// NOTE we have moved many of these functions into this component that take in the following props: submitButtonText, onSubmit, onCancel, and defaultValues 
 function ExpenseForm({ submitButtonLabel, onCancel, onSubmit, defaultValues }) {
   //2. Now for that, we can start with a couple of state slices by using useState, provided by React and by then registering state for the different input values. So here, we could then get our amountValue, for example.
   //2. Notice after || the '' because whenever you fetch an input value, you will get it as a string
-  //4. Instead of using several slices of state to handle each input, we use a single slice and set the default to an object with one property for each input.
+  // 4. Instead of using several slices of state to handle each input, we use a single slice and set the default to an object with one property for each input.
   const [inputs, setInputs] = useState({
     amount: {
       value: defaultValues ? defaultValues.amount.toString() : '',
@@ -25,18 +26,12 @@ function ExpenseForm({ submitButtonLabel, onCancel, onSubmit, defaultValues }) {
     },
   });
 
-  //3. One way to handle the input is to setup a handler for each input: call it amountChangedHandler, so set the amount value to the entered text which react native provides as we have connected the function to onChangeText. In other words, React Native will make sure that this parameter value is provided automatically, and this will be the amount or the value entered into the text input to which this function is connected.
+  //3. One way to handle the input is to setup a handler for each input: call it amountChangedHandler, so set the amount value to the entered text which react native provides as we have connected the function to onChangeText. In other words, React Native will make sure that this parameter value is provided automatically, and this will be the amount or the value entered into the text input to which this function is connected. THE OTHER WAY:
 
-  <Input
-    style={styles.inputsRow}
-    label="Amount"
-    textInputConfig = {{
-      keyboardType: 'decimal-pad',
-      onChange: amountChangedHandler,
-    }}
+
     //4. Here we use one handler to take care of the events for each of the three input using 2 parameters, one to identify the input and one to identify the value entered.
-  function inputChangedHandler(inputIdentifier, enteredValue) {
-    //4. in order to keep the current state we need to create a copy of the state in the setInputs function that returns a new object where we spread the current input values (curInputs), and also override the one value that we want to change (the one received) and we will be able to identify it using inputIdentifier.
+    // 4. in order to keep the current state we need to create a copy of the state in the setInputs function that returns a new object where we spread the current input values (curInputs), and also override the one value that we want to change (the one received) and we will be able to identify it using inputIdentifier.
+  function inputChangedHandler (inputIdentifier, enteredValue) {
     setInputs((curInputs) => {
       return {
         ...curInputs,
@@ -131,6 +126,7 @@ function ExpenseForm({ submitButtonLabel, onCancel, onSubmit, defaultValues }) {
         </Text>
       )}
       <View style={styles.buttons}>
+        // NOTE how we are using onCancel which calls gives us a function as a value on this onCancel prop that will connect this button to the cancelHandler function in screens/ManageExpense.js
         <Button style={styles.button} mode="flat" onPress={onCancel}>
           Cancel
         </Button>
