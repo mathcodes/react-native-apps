@@ -10,7 +10,7 @@ Welcome to the React Native Applications Repository. I do encourage contribution
 <table class="tg" style="width:100% !important display:inline-table; text-align:center;">
 <thead>
   <tr>
-    <th class="tg-0pky" colspan="4">Sample Apps (⭐️=currently in progress)</th>
+    <th class="tg-0pky" colspan="5">Sample Apps (⭐️=currently in progress)</th>
   </tr>
 </thead>
 <tbody>
@@ -44,6 +44,9 @@ Welcome to the React Native Applications Repository. I do encourage contribution
     <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-navigation">Navigation</a>
     </td>
+    <td class="tg-0pky" style="width:20% !important;" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-redux">Redux</a>
+    </td>
     </tr>
     <tr>
     <td class="tg-0pky" style="width:20% !important;" colspan="1">
@@ -55,26 +58,13 @@ Welcome to the React Native Applications Repository. I do encourage contribution
     <td class="tg-0pky" style="width:20% !important;" colspan="1">
       <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-numbers">Numbers</a>
     </td>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-redux">Redux</a>
+     <td class="tg-0pky" style="width:20% !important;" colspan="1">
+      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-expense-trackers">⭐️Expense Trackers⭐️</a>
     </td>
     </tr>
-    <tr>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-expense-tracker/rn-expense-trackers">⭐️Expense Trackers⭐️</a>
-    </td>
-      <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href=""></a>
-    </td>
-      <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href=""></a>
-    </td>
-      <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href=""></a>
-    </td>
-      
-      
- </tr>
+    
+   
+  
 </tbody>
 </table>
 
