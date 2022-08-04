@@ -10,7 +10,7 @@ import { ExpensesContext } from '../store/expenses-context';
 function ManageExpense({ route, navigation }) {
   const expensesCtx = useContext(ExpensesContext);
 
-  const editedExpenseId = route.params?.expenseId;
+  const editedExpenseId = route.params?.expenseId; // this is the id of the expense that is being edited. We can now use this id to fetch the data and pass that data into the expense form to set as initial state
   const isEditing = !!editedExpenseId;
 
   const selectedExpense = expensesCtx.expenses.find(
