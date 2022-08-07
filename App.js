@@ -1,61 +1,92 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
+import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
-const TouchableHighlightExample = () => {
-  const [count, setCount] = useState(0);
-  const onPress = () => setCount(count + 1);
-  const onReset = () => setCount(0);
+import ManageExpense from './screens/ManageExpense';
+import RecentExpenses from './screens/RecentExpenses';
+import AllExpenses from './screens/AllExpenses';
+import { GlobalStyles } from './constants/styles';
+import IconButton from './components/UI/IconButton';
+import ExpensesContextProvider from './store/expenses-context';
 
+const Stack = createNativeStackNavigator();
+const BottomTabs = createBottomTabNavigator();
+
+function ExpensesOverview() {
   return (
-    <View style={styles.container}>
-      <TouchableHighlight onPress={onPress}>
-        <View style={styles.button}>
-          <Text>Touch Here</Text>
-        </View>
-      </TouchableHighlight>
-      <View style={styles.countContainer}>
-        <Text style={styles.countText}>
-          Count: {count || null}
-        </Text>
-      </View>
-      <TouchableHighlight onPress={onReset}>
-        <View style={styles.button2}>
-          <Text>Reset</Text>
-        </View>
-      </TouchableHighlight>
-    </View>
+    <BottomTabs.Navigator
+      screenOptions={({ navigation }) => ({
+        headerStyle: { backgroundColor: GlobalStyles.colors.primary500 },
+        headerTintColor: 'white',
+        tabBarStyle: { backgroundColor: GlobalStyles.colors.primary500 },
+        tabBarActiveTintColor: GlobalStyles.colors.accent500,
+        headerRight: ({ tintColor }) => (
+          <IconButton
+            icon="add"
+            size={24}
+            color={tintColor}
+            onPress={() => {
+              navigation.navigate('ManageExpense');
+            }}
+          />
+        ),
+      })}
+    >
+      <BottomTabs.Screen
+        name="RecentExpenses"
+        component={RecentExpenses}
+        options={{
+          title: 'Recent Expenses',
+          tabBarLabel: 'Recent',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="hourglass" size={size} color={color} />
+          ),
+        }}
+      />
+      <BottomTabs.Screen
+        name="AllExpenses"
+        component={AllExpenses}
+        options={{
+          title: 'All Expenses',
+          tabBarLabel: 'All Expenses',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="calendar" size={size} color={color} />
+          ),
+        }}
+      />
+    </BottomTabs.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    backgroundColor: "#4faeba",
-    paddingHorizontal: 10
-  },
-  button: {
-    alignItems: "center",
-    backgroundColor: "#DDDDDD",
-    padding: 10,
-    borderWidth: 5,
-    borderColor: 'black'
-  },
-  button2: {
-    alignItems: "center",
-    backgroundColor: "#30757d",
-    padding: 10,
-    borderWidth: 5,
-    borderColor: 'black'
-  },
-  countContainer: {
-    alignItems: "center",
-    padding: 10
-  },
-  countText: {
-    color: "#FF00FF",
-    fontSize: 55
-  }
-});
-
-export default TouchableHighlightExample;
+export default function App() {
+  return (
+    <>
+      <StatusBar style="light" />
+      <ExpensesContextProvider>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              headerStyle: { backgroundColor: GlobalStyles.colors.primary500 },
+              headerTintColor: 'white',
+            }}
+          >
+            <Stack.Screen
+              name="ExpensesOverview"
+              component={ExpensesOverview}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="ManageExpense"
+              component={ManageExpense}
+              options={{
+                presentation: 'modal',
+              }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </ExpensesContextProvider>
+    </>
+  );
+}
