@@ -1,4 +1,28 @@
-````import { useContext, useLayoutEffect } from 'react';
+// What is the first kind of request we wanna send?
+
+// Well, I would argue that it makes sense
+
+// that we start with adding expenses besides storing them
+
+// in our local context, which we as mentioned before
+
+// still might want to do so that we still have an offline copy
+
+// which we can view, for example
+
+// without having an internet connection.
+
+// So despite doing that
+
+// we also wanna send it to this fire base back and API
+
+// which we set up and to do all of that
+
+// I will create a number utility helper file
+
+// which I will name http.js.
+
+import { useContext, useLayoutEffect } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 
 import ExpenseForm from '../components/ManageExpense/ExpenseForm';
@@ -6,7 +30,7 @@ import Button from '../components/UI/Button';
 import IconButton from '../components/UI/IconButton';
 import { GlobalStyles } from '../constants/styles';
 import { ExpensesContext } from '../store/expenses-context';
-
+import { storeExpense } from '../util/http';
 function ManageExpense({ route, navigation }) {
   const expensesCtx = useContext(ExpensesContext);
 
@@ -36,6 +60,7 @@ function ManageExpense({ route, navigation }) {
     if (isEditing) {
       expensesCtx.updateExpense(editedExpenseId, expenseData);
     } else {
+      storeExpense(expenseData);
       expensesCtx.addExpense(expenseData);
     }
     navigation.goBack();
