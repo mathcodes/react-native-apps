@@ -1,50 +1,24 @@
 import axios from 'axios';
 
-// Official documentation: https://firebase.google:
-// Method: POST
+const API_KEY = 'AIzaSyAVpYRdE_qinmQF7Ng6ehD7jf1tmRI9CPQ';
 
-// Content-Type: application/json
+async function authenticate(mode, email, password) {
+  // const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=[API_KEY]`;
+  const url = `https://identitytoolkit.googleapis.com/v1/accounts:${mode}?key=${API_KEY}`;
 
-// Endpoint
+  const response = await axios.post(url, {
+    email: email,
+    password: password,
+    returnSecureToken: true,
+  });
 
-// https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]
-// Request Body Payload
-// Property Name	Type	Description
-// email	string	The email for the user to create.
-// password	string	The password for the user to create.
-// returnSecureToken	boolean	Whether or not to return an ID and refresh token. Should always be true.
-
-const WEB_API_KEY = 'AIzaSyDCYasArcOwcALFhIj2szug5aD2PgUQu1E';
-
-function createUSer(email, password) {
-  axios.post(
-    'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + WEB_API_KEY,
-    {
-      email: email,
-      password: password,
-      returnSecureToken: true,
-    }
-  )
+  console.log(response.data);
 }
 
-// async function authenticate(mode, email, password) {
-//   const url = `https://identitytoolkit.googleapis.com/v1/accounts:${mode}?key=` + WEB_API_KEY;
+export async function createUser(email, password) {
+  await authenticate('signUp', email, password);
+}
 
-//   const response = await axios.post(url, {
-//     email: email,
-//     password: password,
-//     returnSecureToken: true,
-//   });
-
-//   const token = response.data.idToken;
-
-//   return token;
-// }
-
-// export function createUser(email, password) {
-//   return authenticate('signUp', email, password);
-// }
-
-// export function login(email, password) {
-//   return authenticate('signInWithPassword', email, password);
-// }
+export async function login(email, password) {
+  await authenticate('signInWithPassword', email, password);
+}
