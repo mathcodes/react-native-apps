@@ -28,7 +28,8 @@ function AuthStack() {
     </Stack.Navigator>
   );
 }
-
+// in order to allow users to reach authenticated user pages, we need to store the data somewhere in the app (that tells us the user is authenticated/logged in)
+// redux and react context are good ways to do this, lets use REACT CONTEXT
 function AuthenticatedStack() {
   const authCtx = useContext(AuthContext);
   return (
@@ -99,6 +100,19 @@ export default function App() {
   return (
     <>
       <StatusBar style="light" />
+      {/* (^)(^) Now to truly expose it,
+
+we of course now need to wrap our
+
+AuthContext.Provider function here
+
+our component around the root component of our application.
+
+And therefore here in App.js
+
+I will actually wrap my entire root container which contains the Navigation Component 
+
+with AuthContextProvider. */}
       <AuthContextProvider>
         <Root />
       </AuthContextProvider>
