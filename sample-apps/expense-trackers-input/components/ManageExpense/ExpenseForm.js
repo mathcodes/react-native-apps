@@ -13,7 +13,7 @@ function ExpenseForm({ submitButtonLabel, onCancel, onSubmit, defaultValues }) {
   // 4. Instead of using several slices of state to handle each input, we use a single slice and set the default to an object with one property for each input.
   const [inputs, setInputs] = useState({
     amount: {
-      value: defaultValues ? defaultValues.amount.toString() : '',
+      value: defaultValues ? defaultValues.amount.toString() : '', // for this form, we want a string because for all the text inputs, we have strings as you learned. And therefore I will call toString on that default value on this amount. If it is not set we fallback to empty string
       isValid: true,
     },
     date: {
