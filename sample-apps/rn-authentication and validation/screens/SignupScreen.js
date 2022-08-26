@@ -3,10 +3,13 @@ import { Alert } from 'react-native';
 
 import AuthContent from '../components/Auth/AuthContent';
 import LoadingOverlay from '../components/ui/LoadingOverlay';
+import { AuthContext } from '../store/auth-context';
 import { createUser } from '../util/auth';
 
 function SignupScreen() {
   const [isAuthenticating, setIsAuthenticating] = useState(false);
+
+  const authCtx = useContext(AuthContext)
 
     // here we want to add async await since createUser returns a promise because it is an async function
     // and await createUser
@@ -15,7 +18,8 @@ function SignupScreen() {
     // so once we submit form we can set this to true
     setIsAuthenticating(true);
     try {
-      await createUser(email, password);
+      const token = await createUser(email, password);
+      authCtx.authenticate(token);
     } catch (error) {
       Alert.alert(
         'Authentication failed',

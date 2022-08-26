@@ -13,12 +13,26 @@ async function authenticate(mode, email, password) {
   });
 
   console.log(response.data);
-}
+  const token = response.data.idToken;
 
-export async function createUser(email, password) {
-  await authenticate('signUp', email, password);
+  return token;
+}
+// OVERLY COMPLEX:
+// export async function createUser(email, password) {
+//   const token = await authenticate('signUp', email, password);
+//   return token;
+// }
+
+// export async function login(email, password) {
+//   const token = await authenticate('signInWithPassword', email, password);
+//   return token;
+// }
+
+// REMOVE async await and simply return the promise which will be returned as a token via 'authenticate' function
+export function createUser(email, password) {
+  return authenticate('signUp', email, password);
 }
 
 export async function login(email, password) {
-  await authenticate('signInWithPassword', email, password);
+  return authenticate('signInWithPassword', email, password);
 }

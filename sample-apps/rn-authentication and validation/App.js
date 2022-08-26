@@ -53,7 +53,7 @@ function Navigation() {
 
 // And therefore here in App.js
 
-// I will actually wrap my entire Navigation container   
+// I will actually wrap my entire Navigation container with AuthContextProvider (must also be imported)
     <AuthContextProvider>
       <NavigationContainer>
         <AuthStack />
