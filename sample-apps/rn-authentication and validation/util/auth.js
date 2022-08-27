@@ -1,50 +1,38 @@
 import axios from 'axios';
 
-// Official documentation: https://firebase.google:
-// Method: POST
+const API_KEY = 'AIzaSyAVpYRdE_qinmQF7Ng6ehD7jf1tmRI9CPQ';
 
-// Content-Type: application/json
+async function authenticate(mode, email, password) {
+  // const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=[API_KEY]`;
+  const url = `https://identitytoolkit.googleapis.com/v1/accounts:${mode}?key=${API_KEY}`;
 
-// Endpoint
+  const response = await axios.post(url, {
+    email: email,
+    password: password,
+    returnSecureToken: true,
+  });
 
-// https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]
-// Request Body Payload
-// Property Name	Type	Description
-// email	string	The email for the user to create.
-// password	string	The password for the user to create.
-// returnSecureToken	boolean	Whether or not to return an ID and refresh token. Should always be true.
+  console.log(response.data);
+  const token = response.data.idToken;
 
-const WEB_API_KEY = 'AIzaSyDCYasArcOwcALFhIj2szug5aD2PgUQu1E';
-
-function createUSer(email, password) {
-  axios.post(
-    'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + WEB_API_KEY,
-    {
-      email: email,
-      password: password,
-      returnSecureToken: true,
-    }
-  )
+  return token;
 }
-
-// async function authenticate(mode, email, password) {
-//   const url = `https://identitytoolkit.googleapis.com/v1/accounts:${mode}?key=` + WEB_API_KEY;
-
-//   const response = await axios.post(url, {
-//     email: email,
-//     password: password,
-//     returnSecureToken: true,
-//   });
-
-//   const token = response.data.idToken;
-
+// OVERLY COMPLEX:
+// export async function createUser(email, password) {
+//   const token = await authenticate('signUp', email, password);
 //   return token;
 // }
 
-// export function createUser(email, password) {
-//   return authenticate('signUp', email, password);
+// export async function login(email, password) {
+//   const token = await authenticate('signInWithPassword', email, password);
+//   return token;
 // }
 
-// export function login(email, password) {
-//   return authenticate('signInWithPassword', email, password);
-// }
+// REMOVE async await and simply return the promise which will be returned as a token via 'authenticate' function
+export function createUser(email, password) {
+  return authenticate('signUp', email, password);
+}
+
+export async function login(email, password) {
+  return authenticate('signInWithPassword', email, password);
+}

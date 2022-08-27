@@ -16,7 +16,7 @@ function AuthContent({ isLogin, onAuthenticate }) {
     confirmPassword: false,
   });
 
-  function  switchAuthModeHandler() {
+  function switchAuthModeHandler() {
     if (isLogin) {
       navigation.replace('Signup');
     } else {
