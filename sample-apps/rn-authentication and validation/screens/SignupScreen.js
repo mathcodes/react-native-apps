@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Alert } from 'react-native';
 
 import AuthContent from '../components/Auth/AuthContent';
@@ -25,10 +25,12 @@ function SignupScreen() {
         'Authentication failed',
         'Could not create user, please check your input and try again later.'
       );
+      setIsAuthenticating(false);
     }
-    // once we are done creating user we can set back to false
-    setIsAuthenticating(false);
   }
+  // once we are done creating user we can set back to false
+
+
    // now lets ue the loading state to is if isAuthenticating is true
   if (isAuthenticating) {
     // return LoadingOverlay component which wants a message prop, so set it to any string of your choice

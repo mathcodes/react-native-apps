@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
@@ -6,7 +7,7 @@ import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import { Colors } from './constants/styles';
-import AuthContextProvider from './store/auth-context';
+import AuthContextProvider, { AuthContext } from './store/auth-context';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,7 @@ function AuthStack() {
 // in order to allow users to reach authenticated user pages, we need to store the data somewhere in the app (that tells us the user is authenticated/logged in)
 // redux and react context are good ways to do this, lets use REACT CONTEXT
 
+// So to protect our screens we only render this navigation if the user is authenticated
 function AuthenticatedStack() {
   return (
     <Stack.Navigator
@@ -41,24 +43,20 @@ function AuthenticatedStack() {
   );
 }
 
+// THis is our ROOT APP COMPONENT, which we initially only render the AuthStack component
+// After the changes we made below, we can render different screens based on the auth status which protects screens against unauthenticated users
 function Navigation() {
+  const authCtx = useContext(AuthContext)
   return (
-// Now to truly expose it,
-
-// we of course now need to wrap our
-
-// AuthContext.Provider function here
-
-// our component around the Navigation component of our application.
-
-// And therefore here in App.js
-
-// I will actually wrap my entire Navigation container with AuthContextProvider (must also be imported)
-    <AuthContextProvider>
+  // Now to truly expose it, wrap the entire Navigation container with AuthContextProvider (must also be imported)
+  // So we want to use state to decide which stack(component) to render, AuthStack or AuthenticatedStack(which holds the screens only for authenticated users). TO do this we want to use context in the top of this component's body, but first we need to move the AuthContextProvider and wrap it around the Navigation component in the App component below.
       <NavigationContainer>
-        <AuthStack />
+        {/* Here we can wrap AuthStack in curly braces to render it dynamically 
+        And we want to checkl if authCtx is NOT authenticated in which case we will use out AuthStack 
+        Or if it IS TRUE, we use our authenticated stack */}        
+        { !authCtx.isAuthenticated && <AuthStack />}
+        { authCtx.isAuthenticated && <AuthenticatedStack />}
       </NavigationContainer>
-    </AuthContextProvider>
   );
 }
 
@@ -66,8 +64,9 @@ export default function App() {
   return (
     <>
       <StatusBar style="light" />
-
-      <Navigation />
+      <AuthContextProvider>
+        <Navigation />
+      </AuthContextProvider>
     </>
   );
 }

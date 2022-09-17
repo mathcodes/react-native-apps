@@ -1,4 +1,4 @@
-// HEre we manage our app-wide auth context
+// Here we manage our app-wide auth context
 import { createContext, useState } from 'react';
 
 // To do that we call createContext (provided by react) and pass it the values we want to pass to our context.
