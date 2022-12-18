@@ -13,59 +13,58 @@ Welcome to my React Native Applications Repository. Below you will find the dire
     <th class="tg-0pky" colspan="5">Sample Apps (⭐️=currently in progress)</th>
   </tr>
 </thead>
-<tbody>
-  <tr>
-   <td class="tg-0pky" style="width:10% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-basic">Basic</a>
-    </td>
-     <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-calculator">Calculator</a>
-    </td>
-     <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-contextAPI">Context API</a>
-    </td>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-counter">Counter</a>
-    </td>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-flexbox1">FlexBox1</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-flexbox2">FlexBox2</a>
-    </td>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-goals-app/tree/main/sample-apps/react-native-goals-list">Goals List</a>
-    </td>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-nav">Nav</a>
-    </td>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-navigation">Navigation</a>
-    </td>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-redux">Redux</a>
-    </td>
+  <tbody>
+    <tr>
+     <td class="tg-0pky" style="width:10% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-basic">Basic</a>
+      </td>
+       <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-calculator">Calculator</a>
+      </td>
+       <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-contextAPI">Context API</a>
+      </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-counter">Counter</a>
+      </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-flexbox2">FlexBox1</a>
+      </td>
     </tr>
     <tr>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-game-setup">Game Setup</a>
-    </td>
       <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-goals-list">Goals List</a>
-    </td>
-    <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-numbers">Numbers</a>
-    </td>
-     <td class="tg-0pky" style="width:20% !important;" colspan="1">
-      <a href="https://github.com/mathcodes/react-native-apps/tree/main/sample-apps/rn-expense-trackers">⭐️Expense Trackers⭐️</a>
-    </td>
-    </tr>
-    
-   
-  
-</tbody>
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-flexbox2">FlexBox2</a>
+      </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-goals-list">Goals List</a>
+      </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-nav">Nav</a>
+      </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-navigation">Navigation</a>
+      </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-redux">Redux</a>
+      </td>
+      </tr>
+      <tr>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-game-setup">Game Setup</a>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-numbers">Numbers</a>
+      </td>
+       <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="https://github.com/mathcodes/react-native-apps/tree/main/SAMPLE%20APPS/rn-expense-tracker2">⭐️Expense Trackers⭐️</a>
+      </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="#">Coming Soon...</a>
+      </td>
+      <td class="tg-0pky" style="width:20% !important;" colspan="1">
+        <a href="#">Coming Soon...</a>
+      </td>
+    </tr> 
+  </tbody>
 </table>
 
 NOTE: 
