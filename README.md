@@ -3,7 +3,7 @@
 ![https://img.shields.io/badge/library-react%20native-blue](https://img.shields.io/badge/library-react%20native-blue) ![https://img.shields.io/badge/library-expo-blue](https://img.shields.io/badge/library-expo-black) ![ios](https://img.shields.io/badge/OS-iOS-white) ![android](https://img.shields.io/badge/library-android-green) 
 
 ## Description
-Welcome to the React Native Applications Repository. I do encourage contributions!!! Anything from minor edits to entire apps you would like to share wiuht the community. Easy way to get your contributions up while networking and learning! Be sure to read this [Code of Conduct](https://github.com/github/docs/blob/main/CODE_OF_CONDUCT.md) provided by GitHub. Feel free to contact me using the link below with questions to get you started. 👍
+Welcome to my React Native Applications Repository. Below you will find the directories for several working react native apps. Just use the commands below in `Usage and Installation` and then choose how you would like to test your apps. iOS, Android, or the desktop versions (Simulator and Emulator respectively). See below for more details and installation guidelines. 
 
 ## Links to Stand-Alone Apps Ready to fork, clone, or download and run!!!
 
@@ -79,51 +79,16 @@ yarn
  
 yarn start
 ```
-You should something similar to the following in your terminal explaining how to launch the app on your device or emulator:
+### To run your apps locally, you will need to download at least one of the following applications:
 
-<table class="tg" style="width:100%; text-align:center;">
-   
-<tbody>
-  <tr>
-    <td class="tg-0pky""color:#519ba5">NOTE: this QR Code will not work, but when you run your app, use the one that comes up in your terminal 👍</h3>
-    </td>
- 
-  </tr>
-</tbody>
-</table>
+#### - [xCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) - MAC - Provides options to install and view iOS and Android application on your desktop.
 
-<img src="./assets/terminal.png" width="40%" />
+#### - [Android Studio](https://developer.android.com/studio) - MAC OR PC - Android Emulator included 
 
-## Key Takeaways 
-### Throughout the different sample apps in the table above, you will find "key takeaways" outlining the major topics covered and the focus of each application. Here is an example:
 
-### Inline styling VS React Native's `StyleSheet`:
+#### - [Expo Go](https://apps.apple.com/us/app/expo-go/id982107779) - iOS - App that provides a platform for viewing and testing iOS apps.
 
-```js
-<Text style={styles.text}>This is just some text</Text>
-<Text style={{color: 'black', backgroundColor: '#d35400', borderColor: 'black', borderWidth: 5, padding: 12, margin: 12,}}>This is just some text</Text>
-
-...
-// React Native StyleSheet Object:
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'teal',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: 'black',
-    backgroundColor: '#d35400',
-    borderColor: 'black',
-    borderWidth: 5,
-    padding: 12,
-    margin: 12,
-}
-});
-```
-
-<img src="./assets/ss1.png" width="20%"/>
+#### Then scan the QR code in your terminal! You can also use the android emulator or ios simulator to test the app on your computer! Please leave star and follow me to stay in touch and show apprecation :) 
 
 ## Contact
 <img src="https://avatars0.githubusercontent.com/u/17928947?v=4" alt="Github profile image" width="80px" height="80px" />
