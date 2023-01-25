@@ -32,12 +32,12 @@ function ManageExpenses({ route, navigation, style }) {
 
   function confirmHandler() {
     //n2 (*)(0) UPDATING AND ADDING For that we have  confirmHandler function which is triggered whenever this button the update or add button:
-    // <Button style={styles.button} onPress={confirmHandler}>
-    //   {isEditing ? 'Update' : 'Add'}
-    // </Button>
+    <Button style={styles.button} onPress={confirmHandler}>
+      {isEditing ? 'Update' : 'Add'}
+    </Button>
     //n2 depending on which mode we are, will be tapped. So, this function is executed when that button is tapped.
     //n2 FIRST check the value in our is editing constant above:
-    //   const isEditing = !!editedExpenseId;
+      const isEditing = !!editedExpenseId;
     //n2 We wanna check if we are editing in which case we wanna call expenses context, updateExpense();. Else if we are not editing, then we are adding. Then we want to call expense context addExpense();
     if (isEditing) {
       expensesCtx.updateExpense(editedExpenseId, {description: 'Testing updateExpense', amount: 139.99, date: new Date('2022-07-09')});
